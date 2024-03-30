@@ -339,11 +339,7 @@ body {
   box-sizing: border-box;
 }
 body {
-  background: -webkit-linear-gradient(bottom, #ffa191, #ffc247);
-  background: linear-gradient(to top, #ffa191, #ffc247);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  background: #000
 }
 #content {
   height: 100%;
@@ -362,7 +358,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: Ubuntu;
-  color: #fff;
+  color: #aaa;
 }
 #content h1,
 #content p {
