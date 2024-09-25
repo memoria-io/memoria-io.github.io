@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://memoria.io" # the base hostname & protocol for your site
 
-linkedin_username: https://www.linkedin.com/company/m-io/
+linkedin_username: m-io
 github_username: memoria-io
 
 # Build settings
