@@ -246,7 +246,6 @@ header {
             transform: translateY(-50%);
             .project-category,
             .project-name {
-                text-transform: uppercase;
                 @include sans-serif-font;
                 padding: 0 15px;
             }
