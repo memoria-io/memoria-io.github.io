@@ -18,7 +18,7 @@ const files = ref(['hello.md', 'about.md'])
 const content = ref('')
 
 const load = async (file: string) => {
-  const res = await fetch(`./articles/${file}`)
+  const res = await fetch(`${import.meta.env.BASE_URL}articles/${file}`)
   const text = await res.text()
   content.value = marked.parse(text)
 }

@@ -1,32 +1,35 @@
 {
-  "name":"memoria-io.github.io",
-  "version":"1.0.0",
-  "description":"memoria default website",
-  "main":"index.js",
-  "directories":{
-    "doc":"docs"
+  "name": "memoria-io.github.io",
+  "version": "1.0.0",
+  "description": "memoria default website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
   },
-  "scripts":{
-    "test":"echo \"Error: no test specified\" && exit 1",
-    "dev":"vite",
-    "build":"vite build"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
-  "repository":{
-    "type":"git",
-    "url":"git+https://github.com/memoria-io/memoria-io.github.io.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memoria-io/memoria-io.github.io.git"
   },
-  "keywords":[],
-  "author":"",
-  "license":"ISC",
-  "bugs":{
-    "url":"https://github.com/memoria-io/memoria-io.github.io/issues"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/memoria-io/memoria-io.github.io/issues"
   },
-  "homepage":"https://github.com/memoria-io/memoria-io.github.io#readme",
-  "devDependencies":{
-    "@vitejs/plugin-vue":"^5.2.4",
-    "vite":"^6.3.5"
+  "homepage": "https://github.com/memoria-io/memoria-io.github.io#readme",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "gh-pages": "^6.3.0",
+    "vite": "^6.3.5"
   },
-  "dependencies":{
-    "marked":"^15.0.11"
+  "dependencies": {
+    "marked": "^15.0.11"
   }
 }
