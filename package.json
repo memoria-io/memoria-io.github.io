@@ -1,0 +1,32 @@
+{
+  "name":"memoria-io.github.io",
+  "version":"1.0.0",
+  "description":"memoria default website",
+  "main":"index.js",
+  "directories":{
+    "doc":"docs"
+  },
+  "scripts":{
+    "test":"echo \"Error: no test specified\" && exit 1",
+    "dev":"vite",
+    "build":"vite build"
+  },
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/memoria-io/memoria-io.github.io.git"
+  },
+  "keywords":[],
+  "author":"",
+  "license":"ISC",
+  "bugs":{
+    "url":"https://github.com/memoria-io/memoria-io.github.io/issues"
+  },
+  "homepage":"https://github.com/memoria-io/memoria-io.github.io#readme",
+  "devDependencies":{
+    "@vitejs/plugin-vue":"^5.2.4",
+    "vite":"^6.3.5"
+  },
+  "dependencies":{
+    "marked":"^15.0.11"
+  }
+}
