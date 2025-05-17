@@ -1,39 +1,29 @@
-.idea
+# Dart/Pub related
+.dart_tool/
+.packages
+.pub-cache/
+build/
 
-_site
+# Flutter-specific
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+generated_plugin_registrant.dart
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# IDEs
+.idea/
+.vscode/
+*.iml
 
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# OS
 .DS_Store
-.AppleDouble
-.LSOverride
+Thumbs.db
 
-# Icon must ends with two \r.
-Icon
-# Thumbnails
-._*
+# Tests
+coverage/
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+# Web output (if using flutter build web)
+build/web/
+
+# Misc
+pubspec.lock # (optional – keep if you're locking versions)
