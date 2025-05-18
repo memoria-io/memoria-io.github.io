@@ -1,142 +1,91 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:memoriaio/pages/about_page.dart';
+import 'package:memoriaio/pages/contact_page.dart';
+import 'package:memoriaio/pages/footer.dart';
+import 'package:memoriaio/pages/home_page.dart';
+import 'package:memoriaio/pages/product_page.dart';
 
 void main() => runApp(const MyApp());
+
+final GoRouter _router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (_, __) => const MainLayout(child: HomePage()),
+    ),
+    GoRoute(
+      path: '/product',
+      builder: (_, __) => const MainLayout(child: ProductPage()),
+    ),
+    GoRoute(
+      path: '/about',
+      builder: (_, __) => const MainLayout(child: AboutPage()),
+    ),
+    GoRoute(
+      path: '/contact',
+      builder: (_, __) => const MainLayout(child: ContactPage()),
+    ),
+  ],
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _router,
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
     );
   }
 }
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
 
-  @override
-  State<MainPage> createState() => _MainPageState();
-}
+class MainLayout extends StatelessWidget {
+  final Widget child;
 
-class _MainPageState extends State<MainPage> {
-  String currentPage = 'home';
+  const MainLayout({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
-    final Color backgroundColor = const Color(0xFFF9F9F9); // off-white
-    final Color textColor = Colors.black87;
-    final Color buttonColor = Colors.white;
-    final Color borderColor = Colors.black26;
-
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: buttonColor,
+        backgroundColor: Colors.white,
         elevation: 0,
-        title: const Image(
-          image: AssetImage('assets/memoria_transparent.png'),
-          height: 100,
+        title: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: const Image(
+            image: AssetImage('assets/memoria_transparent.png'),
+            height: 100,
+            width: 100,
+          ),
         ),
         actions: [
-          TextButton(onPressed: () => setState(() => currentPage = 'home'), child: Text('Features', style: TextStyle(color: textColor))),
-          TextButton(onPressed: () => setState(() => currentPage = 'pricing'), child: Text('Pricing', style: TextStyle(color: textColor))),
-          TextButton(onPressed: () => setState(() => currentPage = 'login'), child: Text('Login', style: TextStyle(color: textColor))),
+          TextButton(
+            onPressed: () => context.go('/'),
+            child: const Text('Home', style: TextStyle(color: Colors.black)),
+          ),
+          TextButton(
+            onPressed: () => context.go('/product'),
+            child: const Text('Product', style: TextStyle(color: Colors.black)),
+          ),
+          TextButton(
+            onPressed: () => context.go('/about'),
+            child: const Text('About', style: TextStyle(color: Colors.black)),
+          ),
+          TextButton(
+            onPressed: () => context.go('/contact'),
+            child: const Text('Contact', style: TextStyle(color: Colors.black)),
+          ),
         ],
       ),
-      body: SingleChildScrollView(child: getPage(textColor, borderColor)),
-      bottomNavigationBar: BottomAppBar(
-        color: buttonColor,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            TextButton(onPressed: () => setState(() => currentPage = 'about'), child: Text('About', style: TextStyle(color: textColor))),
-            TextButton(onPressed: () => setState(() => currentPage = 'contact'), child: Text('Contact', style: TextStyle(color: textColor))),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget getPage(Color textColor, Color borderColor) {
-    switch (currentPage) {
-      case 'about':
-        return const Center(child: Padding(padding: EdgeInsets.all(40), child: Text('About Memoria IO')));
-      case 'contact':
-        return const Center(child: Padding(padding: EdgeInsets.all(40), child: Text('Contact Us at info@memoria.io')));
-      default:
-        return HomePage(textColor: textColor, borderColor: borderColor);
-    }
-  }
-}
-
-class HomePage extends StatelessWidget {
-  final Color textColor;
-  final Color borderColor;
-  const HomePage({super.key, required this.textColor, required this.borderColor});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(32.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const SizedBox(height: 40),
-          Text(
-            'Tailored Technology Solutions for Your Business',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: textColor),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            'Offering IT strategy, cloud services, and cybersecurity.',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: textColor),
-          ),
-          const SizedBox(height: 20),
-          OutlinedButton(
-            onPressed: () {},
-            style: OutlinedButton.styleFrom(
-              backgroundColor: Colors.white,
-              foregroundColor: textColor,
-              side: BorderSide(color: borderColor),
-            ),
-            child: const Text('Get Started'),
-          ),
-          const SizedBox(height: 40),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Icon(Icons.cloud, size: 48),
-              Icon(Icons.security, size: 48),
-              Icon(Icons.code, size: 48),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Text('Cloud Solutions'),
-              Text('Cybersecurity'),
-              Text('Custom Software Development'),
-            ],
-          ),
-          const SizedBox(height: 40),
-          Divider(color: borderColor),
-          const SizedBox(height: 20),
-          Text(
-            '“Smart, reliable technology solutions that drive business success.”',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontStyle: FontStyle.italic, color: textColor),
-          ),
-          const SizedBox(height: 10),
-          const Icon(Icons.account_circle, size: 32),
-          const Text('User Name'),
-          const SizedBox(height: 20),
-          OutlinedButton(onPressed: () {}, child: const Text('Contact Memoria IO')),
+          Expanded(child: child),
+          const Footer(),
         ],
       ),
     );
