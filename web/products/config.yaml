@@ -1,0 +1,7 @@
+markdown_files:
+  - title: "First Article"
+    file: "first.md"
+    date: "2025-01-01"
+  - title: "Second Article"
+    file: "second.md"
+    date: "2025-02-15"

@@ -4,7 +4,7 @@ import 'package:memoriaio/pages/about_page.dart';
 import 'package:memoriaio/pages/contact_page.dart';
 import 'package:memoriaio/pages/footer.dart';
 import 'package:memoriaio/pages/home_page.dart';
-import 'package:memoriaio/pages/product_page.dart';
+import 'package:memoriaio/widgets/markdown_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,8 +15,8 @@ final GoRouter _router = GoRouter(
       builder: (_, __) => const MainLayout(child: HomePage()),
     ),
     GoRoute(
-      path: '/product',
-      builder: (_, __) => const MainLayout(child: ProductPage()),
+      path: '/products',
+      builder: (_, __) => const MainLayout(child: MarkdownPage("products")),
     ),
     GoRoute(
       path: '/about',
@@ -41,7 +41,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MainLayout extends StatelessWidget {
   final Widget child;
 
@@ -57,7 +56,7 @@ class MainLayout extends StatelessWidget {
         title: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: const Image(
-            image: AssetImage('assets/memoria_transparent.png'),
+            image: AssetImage('assets/images/logo.png'),
             height: 100,
             width: 100,
           ),
@@ -68,8 +67,8 @@ class MainLayout extends StatelessWidget {
             child: const Text('Home', style: TextStyle(color: Colors.black)),
           ),
           TextButton(
-            onPressed: () => context.go('/product'),
-            child: const Text('Product', style: TextStyle(color: Colors.black)),
+            onPressed: () => context.go('/products'),
+            child: const Text('Products', style: TextStyle(color: Colors.black)),
           ),
           TextButton(
             onPressed: () => context.go('/about'),
