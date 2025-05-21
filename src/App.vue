@@ -2,7 +2,7 @@
   <div>
     <h1>My Blog</h1>
     <ul>
-      <li v-for="file in files"  :key="file">
+      <li v-for="file in files" :key="file">
         <a href="#" @click.prevent="load(file)">{{ file }}</a>
       </li>
     </ul>
