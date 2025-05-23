@@ -6,10 +6,6 @@ export default {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
-                        'h2': {
-                            color: theme('colors.rose.500'),
-                            fontWeight: '700',
-                        },
                         'pre': {
                             padding: '1em',
                             borderRadius: '0.5em',
