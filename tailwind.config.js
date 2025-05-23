@@ -10,6 +10,23 @@ export default {
                             color: theme('colors.rose.500'),
                             fontWeight: '700',
                         },
+                        'pre': {
+                            padding: '1em',
+                            borderRadius: '0.5em',
+                            overflowX: 'auto',
+                        },
+                        'code': {
+                            background: '#2d2d2d',
+                            borderRadius: '0.25em',
+                            padding: '0.2em 0.4em',
+                            fontSize: '0.9em',
+                        },
+
+                        'pre code': {
+                            background: 'transparent',
+                            padding: 0,
+                            borderRadius: 0,
+                        },
                     },
                 },
             }),

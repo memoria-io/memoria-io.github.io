@@ -6,7 +6,12 @@ if (x < 10) {
   console.log("ok")
 }
 ```
+```javascript
+const hello = "world";
+console.log(hello);
+```
 
+And some `inline code` here.
 
 ---
 __Advertisement :)__

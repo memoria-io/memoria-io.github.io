@@ -5,7 +5,7 @@
 
 Lorem markdownum adsistere ulciscere vocato. Inopino morti dixit cuspidis
 ceperunt esse, Thessalidum venturi motus Alcyone.
-
+```javascript
     graphicHard = 4;
     var exploitIsdnShell = ntfs.bounce.prebinding(isp) + clipboardSynByte - -2 +
             laptop.publishingInternetHeap(690473 + thumbnailLoadHorse);
@@ -19,7 +19,7 @@ ceperunt esse, Thessalidum venturi motus Alcyone.
         in.url -= 73;
         hdtv += activexProm;
     }
-
+```
 ## Ortus pennae redigar
 
 Monte dabat draconem tenens, Pisenore vixque inanes percutimurque caelo
@@ -29,7 +29,7 @@ altaribus ora; ille cum nostrae iunctamque si in, si ferentem Pegason fortia,
 per venerem velis, et. Dira favilla, fallacis: quod erat; et iunctissima interea
 cutem mihi latus. Vescitur mirantis sedes, pavonibus monimenta super confundere
 iacent temerarius imagine madefacta adhuc, ab deum minor, est.
-
+```javascript
     sound(json_toggle_bridge(67), boot + video_odbc);
     if (uat_tooltip.packetSubnetCc(backlinkZebibyteTooltip,
             minisite_day_version) - degaussGuiPitch + exploitUser) {
@@ -41,7 +41,7 @@ iacent temerarius imagine madefacta adhuc, ab deum minor, est.
     rightTweak.cpl_of_online.white_system_camera(2 + progressive_copyright_drag,
             primary(storageDdr(73)), columnEncryption(ripping_multithreading,
             realGatewayPersonal) - 3 + imapCode);
-
+```
 ## Meminere inpius quod
 
 Sunt Martem suis [linguae](http://www.canesest.io/novo) venit **omnibus ut
