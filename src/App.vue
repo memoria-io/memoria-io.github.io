@@ -74,7 +74,6 @@ const load = async (file: string) => {
     
     const text = await response.text()
     content.value = await marked.parse(text)
-    highlightCode()
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load article'
     content.value = ''
