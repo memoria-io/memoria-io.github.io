@@ -27,6 +27,7 @@ import './assets/styles/tailwind.css'
 
 // Markdown processing
 import { marked } from 'marked'
+import type { MarkedOptions } from 'marked'
 
 // Syntax highlighting
 import Prism from 'prismjs'
@@ -50,14 +51,7 @@ const error = ref<string | null>(null)
 
 // Markdown configuration
 marked.setOptions({
-  breaks: true,
-  highlight: (code: string, lang: string) => {
-
-    if (Prism.languages[lang]) {
-      return Prism.highlight(code, Prism.languages[lang], lang)
-    }
-    return code
-  }
+  breaks: true
 })
 
 // Methods
