@@ -5,75 +5,50 @@
 
     <nav>
       <ul>
-        <li v-for="file in files" :key="file">
-          <a href="#" @click.prevent="load(file)">{{ file }}</a>
+        <li v-for="article in articles" :key="article.filename">
+          <a href="#" @click.prevent="load(article.filename)">{{ article.title }}</a>
         </li>
       </ul>
     </nav>
 
     <main class="prose dark:prose-invert max-w-none">
-      <h2>testing my h2</h2>
+      <h2>{{ currentArticle?.title || 'Welcome' }}</h2>
       <div v-html="content" ref="contentDiv"/>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
-// Vue imports
 import { ref, onMounted, nextTick, watch } from 'vue'
-
-// Styles
 import './assets/styles/tailwind.css'
-
-// Markdown processing
-import { marked } from 'marked'
-import type { MarkedOptions } from 'marked'
-
-// Syntax highlighting
-import Prism from 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/components/prism-typescript'
-import 'prismjs/components/prism-bash'
-import 'prismjs/components/prism-json'
-import 'prismjs/components/prism-markdown'
-
-// Constants
-const BASE_URL = import.meta.env.BASE_URL as string
-const ARTICLES_PATH = `${BASE_URL}articles`
+import { parseMarkdown, highlightCode } from './services/markdown'
+import { loadArticle, loadConfig, type ArticleConfig } from './services/articles'
 
 // State
-const files = ref(['hello.md', 'about.md'])
+const articles = ref<ArticleConfig[]>([])
+const currentArticle = ref<ArticleConfig | null>(null)
 const content = ref('')
 const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
 
-// Markdown configuration
-marked.setOptions({
-  breaks: true
-})
-
 // Methods
-const highlightCode = () => {
+const updateHighlighting = () => {
   nextTick(() => {
     if (contentDiv.value) {
-      Prism.highlightAllUnder(contentDiv.value)
+      highlightCode(contentDiv.value)
     }
   })
 }
 
-const load = async (file: string) => {
+const load = async (filename: string) => {
   isLoading.value = true
   error.value = null
+  
   try {
-    const response = await fetch(`${ARTICLES_PATH}/${file}`)
-    if (!response.ok) {
-      throw new Error(`Failed to load article: ${response.statusText}`)
-    }
-    
-    const text = await response.text()
-    content.value = await marked.parse(text)
+    const article = await loadArticle(filename)
+    content.value = await parseMarkdown(article.content)
+    currentArticle.value = articles.value.find(a => a.filename === filename) || null
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load article'
     content.value = ''
@@ -83,10 +58,17 @@ const load = async (file: string) => {
 }
 
 // Watchers
-watch(content, highlightCode)
+watch(content, updateHighlighting)
 
 // Lifecycle
-onMounted(() => {
-  load(files.value[0])
+onMounted(async () => {
+  try {
+    articles.value = await loadConfig()
+    if (articles.value.length > 0) {
+      await load(articles.value[0].filename)
+    }
+  } catch (e) {
+    error.value = e instanceof Error ? e.message : 'Failed to load article list'
+  }
 })
 </script>
