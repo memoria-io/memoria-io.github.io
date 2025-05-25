@@ -5,10 +5,7 @@
       <header class="flex justify-center whitespace-nowrap">
         <div class="flex w-full max-w-[1200px] items-center justify-between px-10 py-5">
           <div class="flex items-center gap-4 text-[#101418]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
-            </div>
-            <h2 class="text-[#101418] text-lg font-bold leading-tight tracking-[-0.015em]">Innovatech Solutions</h2>
+            <img src="/src/assets/images/logo.png" alt="Memoria IO Logo" class="h-14   w-auto">
           </div>
           <div class="flex flex-1 justify-end gap-8">
             <nav class="flex items-center gap-14">
@@ -48,7 +45,7 @@
                  class="text-[#5c738a] text-base font-normal leading-normal min-w-40" 
                  href="#">{{ link }}</a>
             </div>
-            <p class="text-[#5c738a] text-base font-normal leading-normal">@2024 Innovatech Solutions. All rights reserved.</p>
+            <p class="text-[#5c738a] text-base font-normal leading-normal">@2024 Memoria IO. All rights reserved.</p>
           </footer>
         </div>
       </footer>
