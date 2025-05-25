@@ -5,8 +5,8 @@
 
     <nav>
       <ul>
-        <li v-for="article in articles" :key="article.filename">
-          <a href="#" @click.prevent="load(article.filename)">{{ article.title }}</a>
+        <li v-for="entry in products" :key="entry.filePath">
+          <a href="#" @click.prevent="loadProduct(entry)">{{ entry.title }}</a>
         </li>
       </ul>
     </nav>
@@ -22,11 +22,12 @@
 import { ref, onMounted, nextTick, watch } from 'vue'
 import './assets/styles/tailwind.css'
 import { parseMarkdown, highlightCode } from './services/markdown'
-import { loadArticle, loadConfig, type ArticleConfig } from './services/articles'
+import { loadDocument, config as fetchAppConfig, type ProductMeta, AppConfig } from './services/config'
 
 // State
-const articles = ref<ArticleConfig[]>([])
-const currentArticle = ref<ArticleConfig | null>(null)
+const appConfig = ref<AppConfig| null>(null)
+const products = ref<ProductMeta[]|null>(null)
+const currentArticle = ref<ProductMeta | null>(null)
 const content = ref('')
 const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
@@ -41,14 +42,14 @@ const updateHighlighting = () => {
   })
 }
 
-const load = async (filename: string) => {
+const loadProduct = async (productMeta: ProductMeta) => {
   isLoading.value = true
   error.value = null
   
   try {
-    const article = await loadArticle(filename)
-    content.value = await parseMarkdown(article.content)
-    currentArticle.value = articles.value.find(a => a.filename === filename) || null
+    const markdown = await loadDocument(productMeta.filePath)
+    content.value = await parseMarkdown(markdown)
+    currentArticle.value = productMeta || null
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load article'
     content.value = ''
@@ -63,9 +64,11 @@ watch(content, updateHighlighting)
 // Lifecycle
 onMounted(async () => {
   try {
-    articles.value = await loadConfig()
-    if (articles.value.length > 0) {
-      await load(articles.value[0].filename)
+    
+    appConfig.value = await fetchAppConfig()
+    products.value = appConfig.value.products
+    if (products.value.length > 0) {
+      await loadProduct(appConfig.value.products[0])
     }
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load article list'

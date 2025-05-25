@@ -1,14 +1,14 @@
 {
-  "articles": [
+  "products": [
     {
-      "filename": "hello.md",
+      "filePath": "products/hello.md",
       "title": "Hello World",
-      "order": 1
+      "lastUpdated": "2025-01-01"
     },
     {
-      "filename": "about.md",
+      "filePath": "products/about.md",
       "title": "About Me",
-      "order": 2
+      "lastUpdated": "2025-01-02"
     }
   ]
-} 
+}
