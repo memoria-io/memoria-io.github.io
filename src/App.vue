@@ -1,44 +1,67 @@
 <template>
-  <div class="min-h-screen">
-    <header class="bg-gray-800 text-white p-4">
-      <nav>
-        <ul class="flex space-x-4">
-          <li>
-            <router-link to="/" class="hover:text-blue-300 transition-colors" active-class="text-blue-300">
-              Home
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/products" class="hover:text-blue-300 transition-colors" active-class="text-blue-300">
-              Products
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/about" class="hover:text-blue-300 transition-colors" active-class="text-blue-300">
-              About
-            </router-link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- Centered Header -->
+      <header class="flex justify-center whitespace-nowrap">
+        <div class="flex w-full max-w-[1200px] items-center justify-between px-10 py-5">
+          <div class="flex items-center gap-4 text-[#101418]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
+            </div>
+            <h2 class="text-[#101418] text-lg font-bold leading-tight tracking-[-0.015em]">Innovatech Solutions</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <nav class="flex items-center gap-14">
+              <router-link to="/" class="text-[#101418] text-sm font-medium leading-normal">Home</router-link>
+              <router-link to="/products" class="text-[#101418] text-sm font-medium leading-normal">Products</router-link>
+              <router-link to="/solutions" class="text-[#101418] text-sm font-medium leading-normal">Solutions</router-link>
+              <router-link to="/about" class="text-[#101418] text-sm font-medium leading-normal">About</router-link>
+            </nav>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3f7fbf] text-gray-50 text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Get Started</span>
+              </button>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#eaedf1] text-[#101418] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Contact Sales</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
 
-    <main class="container mx-auto p-4">
-      <router-view></router-view>
-    </main>
+      <!-- Main Content -->
+      <main class="flex-1">
+        <router-view></router-view>
+      </main>
 
-    <footer class="bg-gray-800 text-white p-4 mt-8">
-      <p class="text-center">&copy; 2024 My Site</p>
-    </footer>
+      <!-- Centered Footer -->
+      <footer class="flex justify-center">
+        <div class="flex max-w-[960px] flex-1 flex-col">
+          <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+              <a v-for="link in footerLinks" 
+                 :key="link"
+                 class="text-[#5c738a] text-base font-normal leading-normal min-w-40" 
+                 href="#">{{ link }}</a>
+            </div>
+            <p class="text-[#5c738a] text-base font-normal leading-normal">@2024 Innovatech Solutions. All rights reserved.</p>
+          </footer>
+        </div>
+      </footer>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
 import './assets/styles/tailwind.css'
+
+const footerLinks = ['Product', 'Solutions', 'Resources', 'Pricing', 'About Us', 'Contact']
 </script>
 
 <style>
-.router-link-active {
-  @apply text-blue-300;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap');
 </style>

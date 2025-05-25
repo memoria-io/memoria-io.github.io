@@ -1,19 +1,30 @@
 <template>
-  <div class="prose dark:prose-invert max-w-none">
-    <h1>Products</h1>
-    
-    <nav class="mb-8">
-      <ul>
-        <li v-for="entry in products" :key="entry.filePath">
-          <a href="#" @click.prevent="loadProduct(entry)">{{ entry.title }}</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+      <div class="flex flex-wrap justify-between gap-3 p-4">
+        <div class="flex min-w-72 flex-col gap-3">
+          <p class="text-[#101418] tracking-light text-[32px] font-bold leading-tight">Our Products</p>
+          <p class="text-[#5c738a] text-sm font-normal leading-normal">
+            Explore our innovative solutions designed to transform your business operations.
+          </p>
+        </div>
+      </div>
 
-    <div v-if="error" class="text-red-500">{{ error }}</div>
-    <div v-else>
-      <h2>{{ currentArticle?.title || 'Select a product' }}</h2>
-      <div v-if="content" v-html="content" ref="contentDiv"/>
+      <div class="prose dark:prose-invert max-w-none">
+        <nav class="mb-8">
+          <ul>
+            <li v-for="entry in products" :key="entry.filePath">
+              <a href="#" @click.prevent="loadProduct(entry)">{{ entry.title }}</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div v-if="error" class="text-red-500">{{ error }}</div>
+        <div v-else>
+          <h2>{{ currentArticle?.title || 'Select a product' }}</h2>
+          <div v-if="content" v-html="content" ref="contentDiv"/>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -74,4 +85,10 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style>
+.prose {
+  max-width: none;
+}
+</style>
   

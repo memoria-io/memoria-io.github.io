@@ -6,7 +6,9 @@ export default {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
-                       
+                        'html': {
+                            'overflow-y': 'scroll !important',
+                        },
                     },
                 },
             }),

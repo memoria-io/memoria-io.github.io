@@ -1,93 +1,49 @@
 <template>
-  <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
-    <div class="layout-container flex h-full grow flex-col">
-      <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3">
-        <div class="flex items-center gap-4 text-[#101418]">
-          <div class="size-4">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
-          </div>
-          <h2 class="text-[#101418] text-lg font-bold leading-tight tracking-[-0.015em]">Innovatech Solutions</h2>
-        </div>
-        <div class="flex flex-1 justify-end gap-8">
-          <div class="flex items-center gap-9">
-            <router-link to="/" class="text-[#101418] text-sm font-medium leading-normal">Home</router-link>
-            <router-link to="/products" class="text-[#101418] text-sm font-medium leading-normal">Products</router-link>
-            <router-link to="/about" class="text-[#101418] text-sm font-medium leading-normal">About</router-link>
-          </div>
-          <div class="flex gap-2">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3f7fbf] text-gray-50 text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Get Started</span>
-            </button>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#eaedf1] text-[#101418] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Contact Sales</span>
-            </button>
-          </div>
-        </div>
-      </header>
-      <div class="px-40 flex flex-1 justify-center py-5">
-        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-          <div class="flex flex-wrap justify-between gap-3 p-4">
-            <div class="flex min-w-72 flex-col gap-3">
-              <p class="text-[#101418] tracking-light text-[32px] font-bold leading-tight">About Innovatech Solutions</p>
-              <p class="text-[#5c738a] text-sm font-normal leading-normal">
-                We're a team of passionate innovators dedicated to transforming industries through cutting-edge technology. Our mission is to empower businesses with solutions
-                that drive growth, efficiency, and success.
-              </p>
-            </div>
-          </div>
-          <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Mission</h2>
-          <p class="text-[#101418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-            At Innovatech Solutions, we believe in the power of technology to solve complex challenges and create a better future. Our mission is to develop and deliver
-            innovative software solutions that enable businesses to thrive in the digital age. We are committed to excellence, integrity, and customer satisfaction in everything
-            we do.
+  <div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+      <div class="flex flex-wrap justify-between gap-3 p-4">
+        <div class="flex min-w-72 flex-col gap-3">
+          <p class="text-[#101418] tracking-light text-[32px] font-bold leading-tight">About Innovatech Solutions</p>
+          <p class="text-[#5c738a] text-sm font-normal leading-normal">
+            We're a team of passionate innovators dedicated to transforming industries through cutting-edge technology. Our mission is to empower businesses with solutions
+            that drive growth, efficiency, and success.
           </p>
-          <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Story</h2>
-          <p class="text-[#101418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-            Founded in 2015 by a group of visionary engineers and entrepreneurs, Innovatech Solutions started with a simple idea: to build software that makes a real difference.
-            Over the years, we've grown from a small startup to a leading provider of SaaS solutions, serving clients across various industries. Our journey has been marked by
-            continuous innovation, a relentless pursuit of quality, and a deep commitment to our customers' success.
-          </p>
-          <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Meet the Team</h2>
-          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-            <TeamMember
-              v-for="member in teamMembers"
-              :key="member.name"
-              :name="member.name"
-              :role="member.role"
-              :image="member.image"
-            />
-          </div>
-          <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Customer Success Stories</h2>
-          <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <div class="flex items-stretch p-4 gap-3">
-              <SuccessStory
-                v-for="story in successStories"
-                :key="story.title"
-                :title="story.title"
-                :description="story.description"
-                :image="story.image"
-              />
-            </div>
-          </div>
         </div>
       </div>
-      <footer class="flex justify-center">
-        <div class="flex max-w-[960px] flex-1 flex-col">
-          <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-              <a v-for="link in footerLinks" 
-                 :key="link"
-                 class="text-[#5c738a] text-base font-normal leading-normal min-w-40" 
-                 href="#">{{ link }}</a>
-            </div>
-            <p class="text-[#5c738a] text-base font-normal leading-normal">@2024 Innovatech Solutions. All rights reserved.</p>
-          </footer>
+      <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Mission</h2>
+      <p class="text-[#101418] text-base font-normal leading-normal pb-3 pt-1 px-4">
+        At Innovatech Solutions, we believe in the power of technology to solve complex challenges and create a better future. Our mission is to develop and deliver
+        innovative software solutions that enable businesses to thrive in the digital age. We are committed to excellence, integrity, and customer satisfaction in everything
+        we do.
+      </p>
+      <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Story</h2>
+      <p class="text-[#101418] text-base font-normal leading-normal pb-3 pt-1 px-4">
+        Founded in 2015 by a group of visionary engineers and entrepreneurs, Innovatech Solutions started with a simple idea: to build software that makes a real difference.
+        Over the years, we've grown from a small startup to a leading provider of SaaS solutions, serving clients across various industries. Our journey has been marked by
+        continuous innovation, a relentless pursuit of quality, and a deep commitment to our customers' success.
+      </p>
+      <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Meet the Team</h2>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+        <TeamMember
+          v-for="member in teamMembers"
+          :key="member.name"
+          :name="member.name"
+          :role="member.role"
+          :image="member.image"
+        />
+      </div>
+      <h2 class="text-[#101418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Customer Success Stories</h2>
+      <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div class="flex items-stretch p-4 gap-3">
+          <SuccessStory
+            v-for="story in successStories"
+            :key="story.title"
+            :title="story.title"
+            :description="story.description"
+            :image="story.image"
+          />
         </div>
-      </footer>
+      </div>
     </div>
   </div>
 </template>
@@ -147,8 +103,6 @@ const successStories: SuccessStory[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3sW82eHMPCvMlJ3aL2WMQoJAoxCGc6jgdvYPVjZc-S1D4U2-qIXZn72V44Z4634DRhyapklgLplHn3Mf7Q8EMarQiJQRyp6ah7GTSMkisgB7Dayj8ddzwfRnQLjrjntucWSbwNeE1QltbOBV04yvK4i6JACDMinqUbaAbdptPsITzV32Ih-reze1zuthLXcNzBcapQR6lhgaX2_yJuzzutCTuXOIqDZ1pqt35DDibgvMRxSDErjSpKdKxjr7kAfimP4STp_TRHaU_'
   }
 ];
-
-const footerLinks = ['Product', 'Solutions', 'Resources', 'Pricing', 'About Us', 'Contact'];
 </script>
 
 <script lang="ts">
