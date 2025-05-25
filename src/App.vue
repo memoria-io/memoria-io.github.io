@@ -1,78 +1,44 @@
 <template>
-  <div>
-    <h1>My Blog</h1>
-    <div class="debug-style">test</div>
+  <div class="min-h-screen">
+    <header class="bg-gray-800 text-white p-4">
+      <nav>
+        <ul class="flex space-x-4">
+          <li>
+            <router-link to="/" class="hover:text-blue-300 transition-colors" active-class="text-blue-300">
+              Home
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/products" class="hover:text-blue-300 transition-colors" active-class="text-blue-300">
+              Products
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/about" class="hover:text-blue-300 transition-colors" active-class="text-blue-300">
+              About
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <nav>
-      <ul>
-        <li v-for="entry in products" :key="entry.filePath">
-          <a href="#" @click.prevent="loadProduct(entry)">{{ entry.title }}</a>
-        </li>
-      </ul>
-    </nav>
-
-    <main class="prose dark:prose-invert max-w-none">
-      <h2>{{ currentArticle?.title || 'Welcome' }}</h2>
-      <div v-html="content" ref="contentDiv"/>
+    <main class="container mx-auto p-4">
+      <router-view></router-view>
     </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+      <p class="text-center">&copy; 2024 My Site</p>
+    </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 import './assets/styles/tailwind.css'
-import { parseMarkdown, highlightCode } from './services/markdown'
-import { config as fetchAppConfig, type ProductMeta, AppConfig } from './services/config'
-import { loadDocument } from './services/resources'
-
-// State
-const appConfig = ref<AppConfig| null>(null)
-const products = ref<ProductMeta[]|null>(null)
-const currentArticle = ref<ProductMeta | null>(null)
-const content = ref('')
-const contentDiv = ref<HTMLElement | null>(null)
-const isLoading = ref(false)
-const error = ref<string | null>(null)
-
-// Methods
-const updateHighlighting = () => {
-  nextTick(() => {
-    if (contentDiv.value) {
-      highlightCode(contentDiv.value)
-    }
-  })
-}
-
-const loadProduct = async (productMeta: ProductMeta) => {
-  isLoading.value = true
-  error.value = null
-  
-  try {
-    const markdown = await loadDocument(productMeta.filePath)
-    content.value = await parseMarkdown(markdown)
-    currentArticle.value = productMeta || null
-  } catch (e) {
-    error.value = e instanceof Error ? e.message : 'Failed to load article'
-    content.value = ''
-  } finally {
-    isLoading.value = false
-  }
-}
-
-// Watchers
-watch(content, updateHighlighting)
-
-// Lifecycle
-onMounted(async () => {
-  try {
-    
-    appConfig.value = await fetchAppConfig()
-    products.value = appConfig.value.products
-    if (products.value.length > 0) {
-      await loadProduct(appConfig.value.products[0])
-    }
-  } catch (e) {
-    error.value = e instanceof Error ? e.message : 'Failed to load article list'
-  }
-})
 </script>
+
+<style>
+.router-link-active {
+  @apply text-blue-300;
+}
+</style>

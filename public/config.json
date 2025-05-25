@@ -1,13 +1,13 @@
 {
   "products": [
     {
-      "filePath": "products/hello.md",
-      "title": "Hello World",
+      "filePath": "products/first-product.md",
+      "title": "First Product",
       "lastUpdated": "2025-01-01"
     },
     {
-      "filePath": "products/about.md",
-      "title": "About Me",
+      "filePath": "products/second-product.md",
+      "title": "Second Product",
       "lastUpdated": "2025-01-02"
     }
   ]

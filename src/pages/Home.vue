@@ -1,16 +1,10 @@
 <template>
-  <div>
-    <h1>Welcome to the Home Page</h1>
-    <p>This is the main landing page of the application.</p>
+  <div class="prose dark:prose-invert max-w-none">
+    <h1>Welcome</h1>
+    <p>Welcome to our site. Browse our products or learn more about us.</p>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // Add any logic or imports here if needed
 </script>
-
-<style scoped>
-h1 {
-  color: #4caf50;
-}
-</style>

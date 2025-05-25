@@ -10,10 +10,9 @@
         </div>
         <div class="flex flex-1 justify-end gap-8">
           <div class="flex items-center gap-9">
-            <a class="text-[#101418] text-sm font-medium leading-normal" href="#">Product</a>
-            <a class="text-[#101418] text-sm font-medium leading-normal" href="#">Solutions</a>
-            <a class="text-[#101418] text-sm font-medium leading-normal" href="#">Resources</a>
-            <a class="text-[#101418] text-sm font-medium leading-normal" href="#">Pricing</a>
+            <router-link to="/" class="text-[#101418] text-sm font-medium leading-normal">Home</router-link>
+            <router-link to="/products" class="text-[#101418] text-sm font-medium leading-normal">Products</router-link>
+            <router-link to="/about" class="text-[#101418] text-sm font-medium leading-normal">About</router-link>
           </div>
           <div class="flex gap-2">
             <button
