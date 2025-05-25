@@ -22,7 +22,8 @@
 import { ref, onMounted, nextTick, watch } from 'vue'
 import './assets/styles/tailwind.css'
 import { parseMarkdown, highlightCode } from './services/markdown'
-import { loadDocument, config as fetchAppConfig, type ProductMeta, AppConfig } from './services/config'
+import { config as fetchAppConfig, type ProductMeta, AppConfig } from './services/config'
+import { loadDocument } from './services/resources'
 
 // State
 const appConfig = ref<AppConfig| null>(null)
