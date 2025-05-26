@@ -32,6 +32,29 @@
         <router-view></router-view>
       </main>
 
+      <!-- Scroll to Top Button -->
+      <button
+        v-show="showScrollTop"
+        @click="scrollToTop"
+        class="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#3f7fbf] text-white shadow-lg transition-all hover:bg-[#2d5d8f] focus:outline-none"
+        aria-label="Scroll to top"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2.5"
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          ></path>
+        </svg>
+      </button>
+
       <!-- Centered Footer -->
       <footer class="flex justify-center">
         <div class="flex max-w-[960px] flex-1 flex-col">
@@ -52,8 +75,31 @@
 
 <script setup lang="ts">
 import './assets/styles/tailwind.css'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const footerLinks = ['Privacy Policy', 'Terms of Service', 'Contact Us']
+
+// Scroll to top functionality
+const showScrollTop = ref(false)
+
+const checkScroll = () => {
+  showScrollTop.value = window.scrollY > 500
+}
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', checkScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkScroll)
+})
 </script>
 
 <style>
