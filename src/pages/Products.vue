@@ -32,21 +32,9 @@
               <!-- Table of Contents -->
               <div v-if="tableOfContents.length > 0">
                 <h3 class="text-sm font-medium text-[#5c738a] uppercase tracking-wider mb-3">Table of Contents</h3>
-                <ul class="space-y-2">
-                  <li v-for="item in tableOfContents" :key="item.id">
-                    <a 
-                      :href="'#' + item.id"
-                      :class="[
-                        'block text-sm py-1 hover:text-[#3f7fbf] transition-colors',
-                        `pl-${(item.level - 1) * 4}`,
-                        item.level === 1 ? 'font-medium' : '',
-                        'text-[#000000ad]'
-                      ]"
-                    >
-                      {{ item.text }}
-                    </a>
-                  </li>
-                </ul>
+                <template v-for="item in tableOfContents" :key="item.id">
+                  <TocTree :item="item" :activeSection="activeSection" />
+                </template>
               </div>
             </nav>
           </div>
@@ -65,15 +53,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch } from 'vue'
+import { ref, onMounted, nextTick, watch, onUnmounted } from 'vue'
 import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type ProductMeta, AppConfig } from '../services/config'
 import { loadDocument } from '../services/resources'
+import TocTree from '../components/TocTree.vue'
 
 interface TocItem {
   id: string;
   text: string;
   level: number;
+  children: TocItem[];
 }
 
 // State
@@ -85,34 +75,83 @@ const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
 const tableOfContents = ref<TocItem[]>([])
+const activeSection = ref<string>('')
 
-// Methods
-const updateHighlighting = () => {
-  nextTick(() => {
-    if (contentDiv.value) {
-      highlightCode(contentDiv.value)
+// Intersection Observer
+let observer: IntersectionObserver | null = null
+
+const initializeObserver = () => {
+  // Disconnect previous observer if exists
+  if (observer) {
+    observer.disconnect()
+  }
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeSection.value = entry.target.id
+        }
+      })
+    },
+    {
+      rootMargin: '-100px 0px -66% 0px',
+      threshold: 0
     }
-  })
+  )
+
+  // Observe all headers
+  if (contentDiv.value) {
+    const headers = contentDiv.value.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    headers.forEach(header => {
+      if (header.id) {
+        observer?.observe(header)
+      }
+    })
+  }
 }
 
 const generateTableOfContents = () => {
-  const toc: TocItem[] = []
+  const flatToc: TocItem[] = []
   if (contentDiv.value) {
     const headers = contentDiv.value.querySelectorAll('h1, h2, h3, h4, h5, h6')
     headers.forEach((header) => {
-      // Generate an ID if none exists
       if (!header.id) {
         header.id = header.textContent?.toLowerCase().replace(/\s+/g, '-') || ''
       }
       
-      toc.push({
+      flatToc.push({
         id: header.id,
         text: header.textContent || '',
-        level: parseInt(header.tagName[1])
+        level: parseInt(header.tagName[1]),
+        children: []
       })
     })
   }
-  tableOfContents.value = toc
+
+  // Convert flat structure to tree
+  const treeStructure: TocItem[] = []
+  const stack: TocItem[] = []
+
+  flatToc.forEach((item) => {
+    while (stack.length > 0 && stack[stack.length - 1].level >= item.level) {
+      stack.pop()
+    }
+
+    if (stack.length === 0) {
+      treeStructure.push(item)
+    } else {
+      stack[stack.length - 1].children.push(item)
+    }
+
+    stack.push(item)
+  })
+
+  tableOfContents.value = treeStructure
+  
+  nextTick(() => {
+    initializeObserver()
+  })
 }
 
 const loadProduct = async (productMeta: ProductMeta) => {
@@ -136,6 +175,14 @@ const loadProduct = async (productMeta: ProductMeta) => {
   }
 }
 
+const updateHighlighting = () => {
+  nextTick(() => {
+    if (contentDiv.value) {
+      highlightCode(contentDiv.value)
+    }
+  })
+}
+
 // Watchers
 watch(content, updateHighlighting)
 
@@ -149,6 +196,12 @@ onMounted(async () => {
     }
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load product list'
+  }
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
   }
 })
 </script>
