@@ -21,7 +21,6 @@
 
         <div v-if="error" class="text-red-500">{{ error }}</div>
         <div v-else>
-          <h2>{{ currentArticle?.title || 'Select a product' }}</h2>
           <div v-if="content" v-html="content" ref="contentDiv"/>
         </div>
       </div>
