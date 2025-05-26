@@ -74,9 +74,9 @@ visendae **quaerunt** si mersa et imagine Liber, vertit deum, suo arbor nimbis
 vulnus.
 
 
-# Posuere et sedili pondere
+# Posuere et sedili ponderes
 
-## Age ut violari matris volucresque capillis exacta
+## Age ut violari matris volucresque capillis exactas
 
 Lorem markdownum adsistere ulciscere vocato. Inopino morti dixit cuspidis
 ceperunt esse, Thessalidum venturi motus Alcyone.
@@ -95,7 +95,7 @@ ceperunt esse, Thessalidum venturi motus Alcyone.
         hdtv += activexProm;
     }
 
-## Ortus pennae redigar
+## Ortus pennae redigars
 
 Monte dabat draconem tenens, Pisenore vixque inanes percutimurque caelo
 Epidaurius perpetuum opifex advertere gaudia etiam Ladon colubris: sis. Parte
@@ -117,7 +117,7 @@ iacent temerarius imagine madefacta adhuc, ab deum minor, est.
             primary(storageDdr(73)), columnEncryption(ripping_multithreading,
             realGatewayPersonal) - 3 + imapCode);
 
-## Meminere inpius quod
+## Meminere inpius quods
 
 Sunt Martem suis [linguae](http://www.canesest.io/novo) venit **omnibus ut
 veniam** me coniunx. Dedistis qui, aut tua remis **diroque incertas**, rapto cur
