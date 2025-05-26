@@ -81,22 +81,43 @@ const activeSection = ref<string>('')
 let observer: IntersectionObserver | null = null
 
 const initializeObserver = () => {
-  // Disconnect previous observer if exists
   if (observer) {
     observer.disconnect()
   }
 
   observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activeSection.value = entry.target.id
+      if (contentDiv.value) {
+        // Get all headers in document order
+        const allHeaders = Array.from(contentDiv.value.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+        
+        // Find visible headers near the top of the viewport
+        const visibleHeaders = allHeaders
+          .filter(header => {
+            const rect = header.getBoundingClientRect()
+            // Consider headers in the top portion of the viewport
+            return rect.top >= -50 && rect.top <= 150
+          })
+          .map(header => ({
+            id: header.id,
+            level: parseInt(header.tagName[1]),
+            top: header.getBoundingClientRect().top
+          }))
+
+        if (visibleHeaders.length > 0) {
+          // Find the highest-level (lowest number) header among visible ones
+          const minLevel = Math.min(...visibleHeaders.map(h => h.level))
+          const highestLevelHeader = visibleHeaders.find(h => h.level === minLevel)
+          
+          if (highestLevelHeader) {
+            activeSection.value = highestLevelHeader.id
+          }
         }
-      })
+      }
     },
     {
-      rootMargin: '-100px 0px -66% 0px',
-      threshold: 0
+      rootMargin: '-80px 0px -90% 0px',
+      threshold: [0, 1]
     }
   )
 
