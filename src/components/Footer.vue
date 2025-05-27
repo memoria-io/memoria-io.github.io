@@ -10,7 +10,7 @@
              {{ link.text }}
           </router-link>
         </div>
-        <p class="text-[#5c738a] text-base font-normal leading-normal">@2025 Memoria IO. All rights reserved.</p>
+        <p class="text-[#5c738a] text-base font-normal leading-normal">@2025 Memoria IO, S.L. All rights reserved.</p>
       </footer>
     </div>
   </footer>
