@@ -1,13 +1,7 @@
 <template>
-  <MarkdownPage pageName="about" />
+  <MarkdownPage pageName="terms-of-service" />
 </template>
 
 <script setup lang="ts">
 import MarkdownPage from '../components/MarkdownPage.vue'
-</script>
-
-<style>
-.prose {
-  max-width: 100%;
-}
-</style>
+</script> 

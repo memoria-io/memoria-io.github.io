@@ -1,13 +1,7 @@
 <template>
-  <MarkdownPage pageName="about" />
+  <MarkdownPage pageName="privacy-policy" />
 </template>
 
 <script setup lang="ts">
 import MarkdownPage from '../components/MarkdownPage.vue'
-</script>
-
-<style>
-.prose {
-  max-width: 100%;
-}
-</style>
+</script> 
