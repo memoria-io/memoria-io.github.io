@@ -10,6 +10,17 @@
              {{ link.text }}
           </router-link>
         </div>
+        <div class="flex items-center justify-center gap-4">
+          <a href="https://linkedin.com/company/m-io" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/memoria-io" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
+          </a>
+          <a href="https://twitter.com/memoria_io" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white" alt="Twitter" />
+          </a>
+        </div>
         <p class="text-[#5c738a] text-base font-normal leading-normal">@2025 Memoria IO, S.L. All rights reserved.</p>
       </footer>
     </div>

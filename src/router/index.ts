@@ -5,6 +5,7 @@ import About from '../pages/About.vue'
 import Solutions from '../pages/Solutions.vue'
 import PrivacyPolicy from '../pages/PrivacyPolicy.vue'
 import TermsOfService from '../pages/TermsOfService.vue'
+import Contact from '../pages/Contact.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,7 +15,8 @@ const router = createRouter({
         { path: '/about', name: 'about', component: About },
         { path: '/solutions', name: 'solution', component: Solutions },
         { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicy },
-        { path: '/terms-of-service', name: 'terms-of-service', component: TermsOfService }
+        { path: '/terms-of-service', name: 'terms-of-service', component: TermsOfService },
+        { path: '/contact', name: 'contact', component: Contact }
     ]
 })
 
