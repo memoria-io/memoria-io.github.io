@@ -18,7 +18,7 @@
             to="/contact"
             class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#eaedf1] text-[#101418] text-sm font-bold leading-normal tracking-[0.015em]"
           >
-            <span class="truncate">Contact Sales</span>
+            <span class="truncate">Contact us</span>
           </router-link>
         </div>
       </div>
