@@ -6,6 +6,11 @@ export default {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
+                        h1: {
+                            fontSize: '2.25rem',
+                            fontWeight: '700',
+                            marginBottom: '1.5rem'
+                        }
                     },
                 },
             }),
