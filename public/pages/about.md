@@ -14,7 +14,6 @@ To empower teams with modern, maintainable, and secure technology that supports 
 - Transparency and open collaboration  
 - Technical excellence with long-term maintainability
 
-
 ##### Our System & Software Architecture and Best Practices
 
 - Microservices  
