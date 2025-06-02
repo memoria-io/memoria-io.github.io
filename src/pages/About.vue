@@ -4,7 +4,7 @@
       <!-- Hero Section -->
       <div class="mb-20">
         <div class="text-center mb-12">
-          <h1 class="text-[#101418] text-5xl font-bold mb-4">Memoria IO</h1>
+          <h1 class="text-[#101418] text-5xl font-bold mb-4">Memoria IO, S.L.</h1>
           <div class="w-20 h-1 bg-[#3f7fbf] mx-auto mb-4"></div>
           <p class="text-[#3f7fbf] text-xl font-medium tracking-wide uppercase">Technology Consulting & Software
             Engineering</p>
