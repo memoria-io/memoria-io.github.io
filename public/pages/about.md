@@ -14,44 +14,6 @@ To empower teams with modern, maintainable, and secure technology that supports 
 - Transparency and open collaboration  
 - Technical excellence with long-term maintainability
 
-##### Our System & Software Architecture and Best Practices
-
-- Microservices  
-- 12-Factor App  
-- Hexagonal / Onion Architecture  
-- Domain-Driven Design (DDD)  
-- Event-driven Architectures  
-- Event Sourcing and CQRS  
-- Service Mesh  
-- SAGA Pattern  
-- RESTful Service Design  
-- Polyglot Persistence  
-- Serverless
-
-##### Our Security Principles are based on
-
-- Zero Trust Model  
-- Secure-by-default infrastructure and deployments  
-- Privileged Access Management (PAM)  
-- Identity and Access Management (IAM)  
-- Role-Based Access Control (RBAC)  
-- Secrets Management (e.g., Vault, Sealed Secrets)  
-- Multi-Tenant Authentication & SSO (e.g., OIDC, SAML, identity federation)  
-- Tenant Isolation and Scoped Authorization  
-- Audit Logging and Compliance Readiness  
-- OWASP Top 10 Awareness and Mitigation (e.g., injection, XSS, auth flaws)  
-- Secure Software Development Lifecycle (SSDLC) aligned with OWASP guidelines
-
-#### Technologies We Use
-
-- **Languages:** Java, Kotlin, Scala, TypeScript (Currently evaluating Rust)  
-- **Frameworks:** Oracle Helidon, Spring  
-- **Build Tools:** Maven, Gradle  
-- **Paradigms:** Functional and object-oriented programming (OOP), reactive programming  
-- **Orchestration:** Kubernetes, Helm, ArgoCD  
-- **Cloud Platforms:** AWS, GCP  
-- **On-Premise:** KVM-based infrastructure  
-- **Streaming:** Apache Kafka, Apache Pulsar
 
 #### Open Source
 

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
 import Products from '../pages/Products.vue'
 import About from '../pages/About.vue'
-import Solutions from '../pages/Solutions.vue'
+import Engineering from '../pages/Engineering.vue'
 import PrivacyPolicy from '../pages/PrivacyPolicy.vue'
 import TermsOfService from '../pages/TermsOfService.vue'
 import Contact from '../pages/Contact.vue'
@@ -13,7 +13,7 @@ const router = createRouter({
         { path: '/', name: 'home', component: Home },
         { path: '/products', name: 'products', component: Products },
         { path: '/about', name: 'about', component: About },
-        { path: '/solutions', name: 'solution', component: Solutions },
+        { path: '/engineering', name: 'engineering', component: Engineering },
         { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicy },
         { path: '/terms-of-service', name: 'terms-of-service', component: TermsOfService },
         { path: '/contact', name: 'contact', component: Contact }

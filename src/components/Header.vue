@@ -10,7 +10,7 @@
         <nav class="flex items-center gap-14">
           <router-link to="/" class="text-[#101418] text-sm font-medium leading-normal">Home</router-link>
           <router-link to="/products" class="text-[#101418] text-sm font-medium leading-normal">Products</router-link>
-          <router-link to="/solutions" class="text-[#101418] text-sm font-medium leading-normal">Solutions</router-link>
+          <router-link to="/engineering" class="text-[#101418] text-sm font-medium leading-normal">Engineering</router-link>
           <router-link to="/about" class="text-[#101418] text-sm font-medium leading-normal">About</router-link>
         </nav>
         <div class="flex gap-2">
