@@ -8,35 +8,12 @@ While we operate remotely by default, on-site engagements are available upon req
 
 To empower teams with modern, maintainable, and secure technology that supports long-term growth.
 
-#### What We're Building
-
-- **Cloud-native Java Microservice Framework** – Released  
-- **Infrastructure as a Service** – Alpha release  
-- **SaaS Tool for Knowledge Management and Collaboration** – In progress
-
-#### Core Consulting Services
-
-- **Software Development** – Custom systems and platform integration  
-- **Data Analytics** – Transforming data into actionable insights  
-- **IT Strategy** – Aligning technology with business goals  
-- **Cloud Services** – Migration, optimization, and Kubernetes expertise (AWS, GCP)  
-- **Cybersecurity** – Secure development, audits, and compliance support  
-
-We specialize in guiding small and mid-sized businesses through digital transformation with a focus on performance, resilience, and simplicity.
-
 #### Values
 
 - Simplicity over complexity  
 - Transparency and open collaboration  
 - Technical excellence with long-term maintainability
 
-#### Clients We Serve
-
-We work primarily with:
-
-- Startups and scale-ups  
-- SMEs undergoing digital transformation  
-- Technical teams in need of cloud-native guidance
 
 ##### Our System & Software Architecture and Best Practices
 
