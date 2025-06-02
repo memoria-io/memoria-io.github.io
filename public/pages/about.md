@@ -38,12 +38,6 @@ We work primarily with:
 - SMEs undergoing digital transformation  
 - Technical teams in need of cloud-native guidance
 
-#### Why Memoria IO
-
-- Deep expertise in JVM ecosystems and cloud infrastructure  
-- Lean, iterative development with close client collaboration  
-- Emphasis on secure, resilient, and maintainable systems
-
 ##### Our System & Software Architecture and Best Practices
 
 - Microservices  
