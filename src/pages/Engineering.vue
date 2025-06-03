@@ -11,7 +11,6 @@
 
       <!-- Architecture & Best Practices -->
       <section class="mb-16">
-        <h2 class="text-[#101418] text-2xl font-bold mb-8">System & Software Architecture</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
             <div class="bg-[#3f7fbf] bg-opacity-10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -77,7 +76,6 @@
 
       <!-- Security Section -->
       <section class="mb-16 bg-white rounded-lg p-8 shadow-sm">
-        <h2 class="text-[#101418] text-2xl font-bold mb-8">Security First Approach</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="space-y-4">
             <h3 class="text-[#101418] text-xl font-semibold mb-4">Zero Trust Security Model</h3>
@@ -126,7 +124,6 @@
 
       <!-- Technology Stack -->
       <section class="mb-16">
-        <h2 class="text-[#101418] text-2xl font-bold mb-8">Technology Stack</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-white rounded-lg p-6 shadow-sm">
             <h3 class="text-[#101418] text-lg font-semibold mb-4">Languages</h3>

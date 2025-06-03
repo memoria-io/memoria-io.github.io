@@ -55,7 +55,6 @@
 
       <!-- Values Section -->
       <section class="mb-16">
-        <h2 class="text-[#101418] text-2xl font-bold mb-8">Our Values</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Simplicity -->
           <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
