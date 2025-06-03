@@ -11,7 +11,7 @@
       <div class="mb-12 text-center">
         <h1 class="text-[#101418] text-4xl font-bold mb-4">Cloud-Native by Design</h1>
         <p class="text-[#5c738a] text-lg max-w-2xl mx-auto">
-          We help you ship better software through architecture, automation, and observability.
+          Helping you deliver better software—faster—through smart design, secure and scalable architecture, and deep observability.
         </p>
       </div>
 
