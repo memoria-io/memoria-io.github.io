@@ -24,23 +24,23 @@
             <ul class="space-y-2 text-[#5c738a]">
               <li class="flex items-start">
                 <span class="text-[#3f7fbf] mr-2">→</span>
-                <span>Software Development – Custom systems and platform integration</span>
+                <span>Software Development</span>
               </li>
               <li class="flex items-start">
                 <span class="text-[#3f7fbf] mr-2">→</span>
-                <span>Data Analytics – Transforming data into actionable insights</span>
+                <span>Data Analytics</span>
               </li>
               <li class="flex items-start">
                 <span class="text-[#3f7fbf] mr-2">→</span>
-                <span>IT Strategy – Aligning technology with business goals</span>
+                <span>IT Strategy</span>
               </li>
               <li class="flex items-start">
                 <span class="text-[#3f7fbf] mr-2">→</span>
-                <span>Cloud Services – Migration, optimization, and Kubernetes expertise (AWS, GCP)</span>
+                <span>Cloud Services</span>
               </li>
               <li class="flex items-start">
                 <span class="text-[#3f7fbf] mr-2">→</span>
-                <span>Cybersecurity – Secure development, audits, and compliance support</span>
+                <span>Cybersecurity and compliance</span>
               </li>
             </ul>
           </section>
@@ -59,6 +59,11 @@
               <li class="flex items-start">
                 <span class="text-blue-500 mr-2">●</span>
                 <span>SaaS Tool for Knowledge Management and Collaboration – In progress</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brown-500 mr-2">●</span>
+                <span>Opensource utilities <a href="https://github.com/memoria-io" target="_blank"
+                    rel="noopener noreferrer">https://github.com/memoria-io</a></span>
               </li>
             </ul>
           </section>
