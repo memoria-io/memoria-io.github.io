@@ -132,7 +132,7 @@
               <li>Kotlin</li>
               <li>Scala</li>
               <li>TypeScript</li>
-              <li class="text-[#3f7fbf]">Rust (Evaluating)</li>
+              <li>Rust (Evaluating)</li>
             </ul>
           </div>
 
