@@ -158,7 +158,7 @@
           </div>
 
           <div class="bg-white rounded-lg p-6 shadow-sm">
-            <h3 class="text-[#101418] text-lg font-semibold mb-4">Data & Messaging</h3>
+            <h3 class="text-[#101418] text-lg font-semibold mb-4">Messaging & Event Streaming</h3>
             <ul class="space-y-2 text-[#5c738a] text-sm">
               <li>Apache Kafka</li>
               <li>Apache Pulsar</li>
