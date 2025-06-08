@@ -6,7 +6,7 @@
       <div class="relative flex gap-24">
         <!-- Left Sidebar with TOC -->
         <aside class="w-70 absolute">
-          <div class="fixed w-64">
+          <div class="fixed w-64 pt-32">
             <!-- Product List -->
             <div class="mb-6">
               <h3 class="text-sm font-medium text-[#5c738a] uppercase tracking-wider mb-3">Products</h3>
@@ -75,11 +75,20 @@ const loadProduct = async (productMeta: ProductMeta) => {
     content.value = await parseMarkdown(markdown)
     currentArticle.value = productMeta || null
     
-    nextTick(() => {
-      if (contentDiv.value) {
-        highlightCode(contentDiv.value)
-      }
-    })
+    // Reset scroll position and wait for content to be rendered
+    window.scrollTo(0, 0)
+    await nextTick()
+    
+    // Force TOC to reinitialize by temporarily removing the ref
+    const tempDiv = contentDiv.value
+    contentDiv.value = null
+    await nextTick()
+    contentDiv.value = tempDiv
+    
+    // Initialize syntax highlighting
+    if (contentDiv.value) {
+      highlightCode(contentDiv.value)
+    }
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load product'
     content.value = ''
