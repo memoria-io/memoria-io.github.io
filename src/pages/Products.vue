@@ -1,11 +1,11 @@
 <template>
-  <div class="px-40 flex flex-1 justify-center py-5">
-    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+  <div class="px-32 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[1120px] flex-1">
       
 
-      <div class="relative flex gap-8">
+      <div class="relative flex gap-24">
         <!-- Left Sidebar with TOC -->
-        <aside class="w-64 absolute">
+        <aside class="w-70 absolute">
           <div class="fixed w-64">
             <nav class="overflow-y-auto" style="max-height: calc(100vh - 200px);">
               <!-- Product List -->
@@ -41,7 +41,7 @@
         </aside>
 
         <!-- Main Content -->
-        <div class="flex-1 ml-64">
+        <div class="flex-1 ml-80">
           <div v-if="error" class="text-red-500">{{ error }}</div>
           <div v-else class="prose dark:prose-invert max-w-none">
             <div v-if="content" v-html="content" ref="contentDiv"/>
