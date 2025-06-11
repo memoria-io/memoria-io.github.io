@@ -1,8 +1,8 @@
 {
   "products": [
     {
-      "filePath": "products/first-product.md",
-      "title": "First Product",
+      "filePath": "products/helium.md",
+      "title": "Project Helium",
       "lastUpdated": "2025-01-01"
     },
     {
