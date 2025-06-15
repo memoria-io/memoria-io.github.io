@@ -1,6 +1,6 @@
 <template>
   <div class="px-40 flex flex-1 justify-center py-5">
-    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
       <!-- Hero Section -->
       <div class="mb-20">
         <div class="text-center mb-12">

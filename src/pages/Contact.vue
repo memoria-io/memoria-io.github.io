@@ -1,6 +1,6 @@
 <template>
   <div class="px-40 flex flex-1 justify-center py-12">
-    <div class="max-w-[960px] w-full">
+    <div class="max-w-[1200px] w-full">
       <!-- Header -->
       <div class="text-center mb-12">
         <h1 class="text-4xl font-bold text-[#101418] mb-4">Contact Us</h1>
