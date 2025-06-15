@@ -149,7 +149,7 @@
                     </div>
                     <div class="ml-6 mt-1 text-sm text-[#5c738a]">SaaS Platform</div>
                   </div>
-                  <div class="bg-blue-100 text-blue-800 text-sm3 py-1 rounded-full">
+                  <div class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
                     In Progress
                   </div>
                 </div>
