@@ -1,6 +1,6 @@
 <template>
   <header class="flex justify-center whitespace-nowrap">
-    <div class="flex w-full max-w-[1200px] items-center justify-between px-10 py-5">
+    <div class="flex w-full max-w-[1200px] items-center justify-between py-5">
       <div class="flex items-center gap-4 text-[#101418]">
         <a href="/">
           <img src="/src/assets/images/logo.png" alt="Memoria IO Logo" class="h-10 w-auto">

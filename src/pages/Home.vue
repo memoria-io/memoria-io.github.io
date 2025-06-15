@@ -1,6 +1,6 @@
 <template>
   <div class="px-40 flex flex-1 justify-center py-5">
-    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
       <!-- Banner Image -->
       <div class="w-full mb-12">
         <img src="/src/assets/images/memoria_banner.png" alt="Memoria Banner"
@@ -150,7 +150,7 @@
                     </div>
                     <div class="ml-6 mt-1 text-sm text-[#5c738a]">SaaS Platform</div>
                   </div>
-                  <div class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                  <div class="bg-blue-100 text-blue-800 text-sm3 py-1 rounded-full">
                     In Progress
                   </div>
                 </div>
@@ -220,78 +220,6 @@
               <h3 class="text-[#101418] font-medium">Technical Teams</h3>
               <p class="text-sm text-[#5c738a] mt-1">Cloud-native expertise</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Features Grid -->
-      <section class="bg-white rounded-lg p-8 shadow-sm mb-12">
-        <h2 class="text-[#101418] text-2xl font-bold mb-8 text-center">Why Choose Us</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="flex flex-col items-center text-center p-4">
-            <div class="bg-[#3f7fbf] bg-opacity-10 p-4 rounded-full mb-4">
-              <svg class="w-8 h-8 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 class="text-[#101418] text-lg font-semibold mb-2">Expertise</h3>
-            <p class="text-[#5c738a] text-sm">Deep expertise in JVM ecosystems and cloud infrastructure.</p>
-          </div>
-
-          <div class="flex flex-col items-center text-center p-4">
-            <div class="bg-[#3f7fbf] bg-opacity-10 p-4 rounded-full mb-4">
-              <svg class="w-8 h-8 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="text-[#101418] text-lg font-semibold mb-2">Agile</h3>
-            <p class="text-[#5c738a] text-sm">Lean, iterative development with close client collaboration.</p>
-          </div>
-
-          <div class="flex flex-col items-center text-center p-4">
-            <div class="bg-[#3f7fbf] bg-opacity-10 p-4 rounded-full mb-4">
-              <svg class="w-8 h-8 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <h3 class="text-[#101418] text-lg font-semibold mb-2">Support</h3>
-            <p class="text-[#5c738a] text-sm">24/7 expert support to ensure your success.</p>
-          </div>
-
-          <div class="flex flex-col items-center text-center p-4">
-            <div class="bg-[#3f7fbf] bg-opacity-10 p-4 rounded-full mb-4">
-              <svg class="w-8 h-8 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <h3 class="text-[#101418] text-lg font-semibold mb-2">Reliability</h3>
-            <p class="text-[#5c738a] text-sm">Focus on secure, resilient, and maintainable systems.</p>
-          </div>
-
-          <div class="flex flex-col items-center text-center p-4">
-            <div class="bg-[#3f7fbf] bg-opacity-10 p-4 rounded-full mb-4">
-              <svg class="w-8 h-8 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-            </div>
-            <h3 class="text-[#101418] text-lg font-semibold mb-2">Security</h3>
-            <p class="text-[#5c738a] text-sm">Industry best practices in IAM, PAM, and zero-trust architecture.</p>
-          </div>
-
-          <div class="flex flex-col items-center text-center p-4">
-            <div class="bg-[#3f7fbf] bg-opacity-10 p-4 rounded-full mb-4">
-              <svg class="w-8 h-8 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 class="text-[#101418] text-lg font-semibold mb-2">Observability</h3>
-            <p class="text-[#5c738a] text-sm">Built-in monitoring, tracing, and logging from day one.</p>
           </div>
         </div>
       </section>
