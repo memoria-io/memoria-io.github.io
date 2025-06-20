@@ -10,5 +10,39 @@
       "title": "Project Carbon",
       "lastUpdated": "2025-01-02"
     }
+  ],
+  "caseStudies": [
+    {
+      "id": "enterprise-data",
+      "filePath": "case-studies/enterprise-data.md",
+      "title": "Enterprise Data Platform",
+      "technologies": ["Kafka", "Kubernetes", "Java"],
+      "icon": "building",
+      "excerpt": "Built a scalable data platform processing 1TB+ daily transactions for a Fortune 500 company."
+    },
+    {
+      "id": "healthcare-platform",
+      "filePath": "case-studies/healthcare-platform.md",
+      "title": "Secure Healthcare Platform",
+      "technologies": ["Spring", "AWS", "Kotlin"],
+      "icon": "shield",
+      "excerpt": "Developed a HIPAA-compliant healthcare platform serving 50+ hospitals."
+    },
+    {
+      "id": "fintech-microservices",
+      "filePath": "case-studies/fintech-microservices.md",
+      "title": "FinTech Microservices",
+      "technologies": ["Helidon", "Kubernetes", "Java"],
+      "icon": "lightning",
+      "excerpt": "Architected a microservices platform for a leading FinTech company."
+    },
+    {
+      "id": "ecommerce-platform",
+      "filePath": "case-studies/ecommerce-platform.md",
+      "title": "E-commerce Platform",
+      "technologies": ["Kafka", "Spring", "PostgreSQL"],
+      "icon": "shopping-cart",
+      "excerpt": "Built a high-performance e-commerce platform handling 1M+ daily users."
+    }
   ]
 }

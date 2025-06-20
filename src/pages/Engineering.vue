@@ -169,6 +169,52 @@
         </div>
       </section>
 
+      <!-- Case Studies -->
+      <section class="mb-16" id="case-studies">
+        <h2 class="text-[#101418] text-2xl font-bold mb-8 text-center">Case Studies</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div v-for="study in caseStudies" :key="study.id"
+               class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer"
+               @click="openCaseStudy(study.id)">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#3f7fbf] bg-opacity-10 p-2 rounded-lg">
+                  <component :is="getIcon(study.icon)" class="w-6 h-6 text-[#3f7fbf]" />
+                </div>
+                <h3 class="text-[#101418] text-xl font-semibold">{{ study.title }}</h3>
+              </div>
+              <p class="text-[#5c738a] mb-4">{{ study.excerpt }}</p>
+              <div class="flex flex-wrap gap-2">
+                <span v-for="tech in study.technologies" :key="tech"
+                      class="px-3 py-1 bg-[#3f7fbf] bg-opacity-10 text-[#3f7fbf] rounded-full text-sm">
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study Modal -->
+      <div v-if="selectedCaseStudy" 
+           class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+           @click="closeCaseStudy">
+        <div class="bg-white rounded-lg max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto"
+             @click.stop>
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-6">
+              <h2 class="text-2xl font-bold text-[#101418]">{{ selectedCaseStudy.title }}</h2>
+              <button @click="closeCaseStudy" class="text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="prose max-w-none" v-html="selectedCaseStudy.content"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- CTA Section -->
       <section class="text-center bg-[#3f7fbf] bg-opacity-5 rounded-lg p-8">
         <h2 class="text-[#101418] text-2xl font-bold mb-4">Ready to Build Something Great?</h2>
@@ -184,7 +230,91 @@
 </template>
 
 <script setup lang="ts">
-// Component logic can be added here if needed
+import { ref, onMounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { marked } from 'marked'
+
+interface CaseStudy {
+  id: string
+  title: string
+  technologies: string[]
+  icon: string
+  excerpt: string
+  content?: string
+}
+
+const route = useRoute()
+const selectedCaseStudy = ref<CaseStudy | null>(null)
+const caseStudies = ref<CaseStudy[]>([])
+const config = ref<any>(null)
+
+const getIcon = (icon: string) => {
+  const icons = {
+    building: 'BuildingIcon',
+    shield: 'ShieldIcon',
+    lightning: 'LightningIcon',
+    'shopping-cart': 'ShoppingCartIcon'
+  }
+  return icons[icon as keyof typeof icons] || 'BuildingIcon'
+}
+
+const fetchMarkdown = async (filePath: string): Promise<string> => {
+  const response = await fetch(`/${filePath}`)
+  return response.text()
+}
+
+const openCaseStudy = async (id: string) => {
+  const study = caseStudies.value.find(study => study.id === id)
+  if (study) {
+    const configStudy = config.value.caseStudies.find((cs: any) => cs.id === id)
+    if (configStudy) {
+      const markdown = await fetchMarkdown(configStudy.filePath)
+      study.content = marked(markdown) as string
+      selectedCaseStudy.value = study
+      window.history.pushState({}, '', `#${id}`)
+    }
+  }
+}
+
+const closeCaseStudy = () => {
+  selectedCaseStudy.value = null
+  window.history.pushState({}, '', '#case-studies')
+}
+
+// Initialize case studies from config
+onMounted(async () => {
+  try {
+    const response = await fetch('/config.json')
+    config.value = await response.json()
+    
+    // Initialize case studies from config
+    caseStudies.value = config.value.caseStudies.map((study: any) => ({
+      id: study.id,
+      title: study.title,
+      technologies: study.technologies,
+      icon: study.icon,
+      excerpt: study.excerpt
+    }))
+
+    // Handle direct links to case studies
+    const hash = window.location.hash.slice(1)
+    if (hash) {
+      await openCaseStudy(hash)
+    }
+  } catch (error) {
+    console.error('Failed to load case studies:', error)
+  }
+})
+
+// Watch for hash changes
+watch(() => route.hash, async (newHash) => {
+  const id = newHash.slice(1)
+  if (id) {
+    await openCaseStudy(id)
+  } else {
+    closeCaseStudy()
+  }
+})
 </script>
 
 <style>

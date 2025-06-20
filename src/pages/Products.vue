@@ -51,13 +51,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted, nextTick, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type ProductMeta, AppConfig } from '../services/config'
 import { loadDocument } from '../services/resources'
 import TableOfContents from '../components/TableOfContents.vue'
 
 // State
+const route = useRoute()
 const appConfig = ref<AppConfig | null>(null)
 const products = ref<ProductMeta[] | null>(null)
 const currentArticle = ref<ProductMeta | null>(null)
@@ -74,6 +76,10 @@ const loadProduct = async (productMeta: ProductMeta) => {
     const markdown = await loadDocument(productMeta.filePath)
     content.value = await parseMarkdown(markdown)
     currentArticle.value = productMeta || null
+    
+    // Update URL hash
+    const productId = productMeta.filePath.replace('products/', '').replace('.md', '')
+    window.history.pushState({}, '', `#${productId}`)
     
     // Reset scroll position and wait for content to be rendered
     window.scrollTo(0, 0)
@@ -97,16 +103,43 @@ const loadProduct = async (productMeta: ProductMeta) => {
   }
 }
 
+const loadProductById = async (productId: string) => {
+  if (!products.value) return
+  
+  const product = products.value.find(p => {
+    const id = p.filePath.replace('products/', '').replace('.md', '')
+    return id === productId
+  })
+  
+  if (product) {
+    await loadProduct(product)
+  }
+}
+
 // Initialize
 onMounted(async () => {
   try {
     appConfig.value = await fetchAppConfig()
     products.value = appConfig.value.products
-    if (products.value.length > 0) {
+    
+    // Check for hash in URL
+    const hash = window.location.hash.slice(1)
+    if (hash && products.value.length > 0) {
+      await loadProductById(hash)
+    } else if (products.value.length > 0) {
+      // Load first product by default
       await loadProduct(appConfig.value.products[0])
     }
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load product list'
+  }
+})
+
+// Watch for hash changes
+watch(() => route.hash, async (newHash) => {
+  const productId = newHash.slice(1)
+  if (productId) {
+    await loadProductById(productId)
   }
 })
 </script>
