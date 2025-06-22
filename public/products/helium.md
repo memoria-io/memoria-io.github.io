@@ -16,6 +16,8 @@ Built on established patterns like Domain-Driven Design (DDD) and Hexagonal Arch
 
 *Figure 1: Helidon SE 4 (previously Nima) - benchmarks* <sup>[[4]]</sup>
 
+It also supports **LLM-based use cases** through integration with [LangChain4j](https://github.com/langchain4j/langchain4j), enabling teams to build AI-assisted features natively within Helidon services.
+
 ### Motivation
 
 Building microservices remains a recurring challenge. While most services today follow well established patterns, technoglogies and tooling not every medium sized company or Startup has the engineering maturity or architectural expertise to apply them correctly specifically from the start. [Case Study: Zalando’s Zalon](/blog/zalon)
@@ -60,6 +62,9 @@ As Martin Fowler notes:
 - **Simplicity of Blocking Code**
   Straightforward exception handling, full stack traces, and easier debugging—without the complexity of reactive scaffolding.
 
+- **AI-Native Integration**  
+  Supports LangChain4j for building conversational agents, RAG pipelines, and other LLM-driven features without leaving your service boundary.
+
 ### Strategic Value
 
 - **Sustained Delivery Speed**  
@@ -85,6 +90,9 @@ As Martin Fowler notes:
 - **No Runtime Magic**  
   Avoids annotation-driven abstractions and reflection-heavy frameworks, using explicit, predictable code instead.  
   *E.g., no hidden proxies or dynamic classpath hacks—making it easier to debug, and highly compatible with GraalVM native image compilation.*
+
+- **AI-Ready by Design**  
+  LangChain4j can be integrated as a first-class module, enabling services to embed LLM-powered workflows using the same structured patterns.
 
 ### Who It's For
 
@@ -112,6 +120,7 @@ Helium, built on Helidon SE 4 and virtual threads, sidesteps both limitations. I
 - Follows **Hexagonal Architecture** and **DDD** principles to keep domain logic isolated and testable
 - Modular project layout with working examples to accelerate onboarding
 - Includes **ArchUnit** rules to enforce architectural boundaries and layering
+- Optional **LangChain4j** module for building LLM-powered services (e.g., chat, RAG, agents)
 
 ![Hexagonal architecture](images/hexagonal.png) *Figure 2: Good design stamina hypothesis* <sup>[[6]]</sup>
 
