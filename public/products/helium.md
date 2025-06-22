@@ -6,7 +6,7 @@
 
 **Project Helium** is a Java <sup>(JDK 24)</sup> microservice foundation designed to help teams move faster without compromising on quality. Whether you're launching a new product or modernizing legacy systems, it provides secure defaults, a scalable architecture, and a clear project structure—so your team can build on a solid foundation instead of starting from scratch.
 
-Backed by over a decade of hands-on experience in projects delivered at leading European tech companies like Zalando, Glovo, and Jobandtalent, it reflects proven practices that simplify backend development while avoiding common pitfalls.
+Backed by over a decade of hands-on experience—and shaped by working alongside highly experienced engineers at leading European tech companies like Zalando, Glovo, and Jobandtalent—it reflects proven practices that simplify backend development while avoiding common pitfalls.
 
 It comes with modular integrations built for real-world backend systems—from environment configs and multi-tenant auth to observability and deployment pipelines. Features like `TLS/mTLS`, `SSO`, `multi-OIDC` provider support, and `OpenTelemetry` are included out of the box, making it easier to get production-ready infrastructure up and running quickly.
 
