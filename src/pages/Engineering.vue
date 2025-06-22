@@ -178,8 +178,11 @@
                @click="openCaseStudy(study.id)">
             <div class="p-6">
               <div class="flex items-center gap-3 mb-4">
-                <div class="bg-[#3f7fbf] bg-opacity-10 p-2 rounded-lg">
-                  <component :is="getIcon(study.icon)" class="w-6 h-6 text-[#3f7fbf]" />
+                <div class="bg-[#3f7fbf] bg-opacity-10 p-3 rounded-lg">
+                  <object v-if="isSvg(study.logo)" :data="study.logo" type="image/svg+xml" class="w-8 h-8 text-[#3f7fbf]">
+                    <img :src="study.logo" :alt="study.title + ' logo'" class="w-8 h-8 object-contain">
+                  </object>
+                  <img v-else :src="study.logo" :alt="study.title + ' logo'" class="w-8 h-8 object-contain">
                 </div>
                 <h3 class="text-[#101418] text-xl font-semibold">{{ study.title }}</h3>
               </div>
@@ -238,7 +241,7 @@ interface CaseStudy {
   id: string
   title: string
   technologies: string[]
-  icon: string
+  logo: string
   excerpt: string
   content?: string
 }
@@ -248,14 +251,8 @@ const selectedCaseStudy = ref<CaseStudy | null>(null)
 const caseStudies = ref<CaseStudy[]>([])
 const config = ref<any>(null)
 
-const getIcon = (icon: string) => {
-  const icons = {
-    building: 'BuildingIcon',
-    shield: 'ShieldIcon',
-    lightning: 'LightningIcon',
-    'shopping-cart': 'ShoppingCartIcon'
-  }
-  return icons[icon as keyof typeof icons] || 'BuildingIcon'
+const isSvg = (filePath: string): boolean => {
+  return filePath.toLowerCase().endsWith('.svg')
 }
 
 const fetchMarkdown = async (filePath: string): Promise<string> => {
@@ -292,7 +289,7 @@ onMounted(async () => {
       id: study.id,
       title: study.title,
       technologies: study.technologies,
-      icon: study.icon,
+      logo: study.logo,
       excerpt: study.excerpt
     }))
 

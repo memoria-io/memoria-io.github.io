@@ -1,10 +1,33 @@
-# Second product
+# Project Argon  
+
+**Composable Infrastructure as Code Stack for Microservices**  
+A modular, layered IaC toolkit for provisioning, bootstrapping, and managing Kubernetes platforms—from bare metal to GitOps.
+
+**Build distributed systems from bare metal to production-ready Kubernetes—automatically.**  
+This modular platform toolkit automates every step of infrastructure setup, from VM provisioning to Kubernetes bootstrap, observability, and GitOps-based application delivery. With cleanly separated layers, each part can be reused, extended, or replaced independently—giving you full control without vendor lock-in.
+
+## Layered Architecture & Cloud Model Alignment
+
+- **Host Provisioning Layer** *(Infrastructure as a Service – IaaS)*  
+  Sets up the base infrastructure: virtualization (KVM), networking, and OS provisioning. Equivalent to managing your own compute layer, similar to what cloud providers abstract as IaaS.
+
+- **Cluster Bootstrap Layer** *(Container as a Service – CaaS)*  
+  Installs Kubernetes (K3s) on provisioned hosts. Delivers a container orchestration platform similar to services like EKS, GKE, or AKS—giving you control over the Kubernetes control plane and node infrastructure.
+
+- **Core Services Layer** *(Platform as a Service – PaaS)*  
+  Deploys essential platform tools (ArgoCD, Helm, Signoz, Traefik, Keycloak, etc.). Provides a ready-to-use platform layer for service delivery, security, and observability—akin to features offered by commercial PaaS platforms.
+
+- **Application Delivery Layer** *(Developer Platform / Internal Developer Platform – IDP)*  
+  Automates application deployment via GitOps. Focused on developer workflows and CI/CD integration, this layer abstracts infrastructure details and acts like an IDP layer to streamline service delivery on any Kubernetes.
+
 # Posuere et sedili pondere
 
 ## Age ut violari matris volucresque capillis exacta
+
 this is an inline code `hellworld()`
 Lorem markdownum adsistere ulciscere vocato. Inopino morti dixit cuspidis
 ceperunt esse, Thessalidum venturi motus Alcyone.
+
 ```javascript
     graphicHard = 4;
     var exploitIsdnShell = ntfs.bounce.prebinding(isp) + clipboardSynByte - -2 +
@@ -20,6 +43,7 @@ ceperunt esse, Thessalidum venturi motus Alcyone.
         hdtv += activexProm;
     }
 ```
+
 ## Ortus pennae redigar
 
 Monte dabat draconem tenens, Pisenore vixque inanes percutimurque caelo
@@ -29,6 +53,7 @@ altaribus ora; ille cum nostrae iunctamque si in, si ferentem Pegason fortia,
 per venerem velis, et. Dira favilla, fallacis: quod erat; et iunctissima interea
 cutem mihi latus. Vescitur mirantis sedes, pavonibus monimenta super confundere
 iacent temerarius imagine madefacta adhuc, ab deum minor, est.
+
 ```javascript
     sound(json_toggle_bridge(67), boot + video_odbc);
     if (uat_tooltip.packetSubnetCc(backlinkZebibyteTooltip,
@@ -42,6 +67,7 @@ iacent temerarius imagine madefacta adhuc, ab deum minor, est.
             primary(storageDdr(73)), columnEncryption(ripping_multithreading,
             realGatewayPersonal) - 3 + imapCode);
 ```
+
 ## Meminere inpius quod
 
 Sunt Martem suis [linguae](http://www.canesest.io/novo) venit **omnibus ut
@@ -72,7 +98,6 @@ congestis, extremo, et. Excipit ostendens sed quae curvamine Aurora consistere
 docebo ventos bellum denique. Cum vitta praemia? Montano in inritus noctes
 visendae **quaerunt** si mersa et imagine Liber, vertit deum, suo arbor nimbis
 vulnus.
-
 
 # Posuere et sedili ponderes
 

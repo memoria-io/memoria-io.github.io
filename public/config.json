@@ -6,42 +6,96 @@
       "lastUpdated": "2025-01-01"
     },
     {
-      "filePath": "products/carbon.md",
-      "title": "Project Carbon",
+      "filePath": "products/argon.md",
+      "title": "Project Argon",
       "lastUpdated": "2025-01-02"
     }
   ],
   "caseStudies": [
     {
-      "id": "enterprise-data",
-      "filePath": "case-studies/enterprise-data.md",
-      "title": "Enterprise Data Platform",
-      "technologies": ["Kafka", "Kubernetes", "Java"],
-      "icon": "building",
-      "excerpt": "Built a scalable data platform processing 1TB+ daily transactions for a Fortune 500 company."
+      "id": "grene",
+      "filePath": "case-studies/grene.md",
+      "logo": "/images/logos/grene.png",
+      "title": "Grene: Ecommerce Platform",
+      "technologies": [
+        "Java",
+        "JSF",
+        "Javascript",
+        "MySQL"
+      ],
+      "excerpt": "Grene is a leading ecommerce platform in Denmark"
     },
     {
-      "id": "healthcare-platform",
-      "filePath": "case-studies/healthcare-platform.md",
-      "title": "Secure Healthcare Platform",
-      "technologies": ["Spring", "AWS", "Kotlin"],
-      "icon": "shield",
+      "id": "zalon",
+      "filePath": "case-studies/zalon.md",
+      "logo": "/images/logos/zalon.png",
+      "title": "Zalon by Zalando: Scalable Data Platform",
+      "technologies": [
+        "Java",
+        "Python",
+        "Kafka",
+        "Spark",
+        "Redshift",
+        "Airflow",
+        "Kubernetes",
+        "AWS",
+        "PostgreSQL",
+        "Cloudformation",
+        "Quicksight"
+      ],
+      "excerpt": "Zalon is a subsidiary of Zalando, a leading online fashion retailer. It needed a data platform to support their specific business intelligence needs."
+    },
+    {
+      "id": "zalando",
+      "filePath": "case-studies/zalando.md",
+      "logo": "/images/logos/zalando.svg",
+      "title": "Zalando: ",
+      "technologies": [
+        "Java",
+        "Spring",
+        "Elasticsearch",
+        "Kafka",
+        "Kubernetes",
+        "AWS",
+        "Cloudformation"
+      ],
+      "excerpt": "Zalon is a subsidiary of Zalando, a leading online fashion retailer. It needed a data platform to support their specific business intelligence needs."
+    },
+    {
+      "id": "glovo",
+      "filePath": "case-studies/glovo.md",
+      "logo": "/images/logos/glovo.svg",
+      "title": "Tier 1 Microservice - Glovo",
+      "technologies": [
+        "Java",
+        "Spring",
+        "AWS",
+        "Kubernetes",
+        "Redis"
+      ],
       "excerpt": "Developed a HIPAA-compliant healthcare platform serving 50+ hospitals."
     },
     {
-      "id": "fintech-microservices",
-      "filePath": "case-studies/fintech-microservices.md",
-      "title": "FinTech Microservices",
-      "technologies": ["Helidon", "Kubernetes", "Java"],
-      "icon": "lightning",
+      "id": "jobandtalent",
+      "filePath": "case-studies/jobandtalent.md",
+      "logo": "/images/logos/jobandtalent.png",
+      "title": "Architecture and Technology Migration - Jobandtalent",
+      "technologies": [
+        "Java",
+        "Kubernetes"
+      ],
       "excerpt": "Architected a microservices platform for a leading FinTech company."
     },
     {
-      "id": "ecommerce-platform",
-      "filePath": "case-studies/ecommerce-platform.md",
-      "title": "E-commerce Platform",
-      "technologies": ["Kafka", "Spring", "PostgreSQL"],
-      "icon": "shopping-cart",
+      "id": "tamias",
+      "filePath": "case-studies/tamias.md",
+      "logo": "/images/logos/tamias.png",
+      "title": "Tamias: POS Solution",
+      "technologies": [
+        "Kafka",
+        "Spring",
+        "PostgreSQL"
+      ],
       "excerpt": "Built a high-performance e-commerce platform handling 1M+ daily users."
     }
   ]
