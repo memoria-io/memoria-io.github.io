@@ -1,6 +1,7 @@
-
 export interface AppConfig {
   products: ProductMeta[]
+  blogPosts: BlogPostMeta[]
+  caseStudies: CaseStudyMeta[]
 }
 
 export interface ProductMeta {
@@ -9,6 +10,21 @@ export interface ProductMeta {
   lastUpdated: string
 }
 
+export interface BlogPostMeta {
+  filePath: string
+  title: string
+  lastUpdated: string
+  excerpt: string
+}
+
+export interface CaseStudyMeta {
+  id: string
+  filePath: string
+  title: string
+  technologies: string[]
+  logo: string
+  excerpt: string
+}
 
 export const config = async (): Promise<AppConfig> => {
   const response = await fetch(`config.json`)

@@ -14,32 +14,7 @@
         <!-- Contact Information -->
         <div class="space-y-8">
           <!-- Sales Section -->
-          <div class="bg-white rounded-lg p-6 shadow-sm">
-            <h2 class="text-xl font-semibold text-[#101418] mb-4 flex items-center">
-              <svg class="w-5 h-5 mr-2 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                  d="M3 3h18v18H3V3zm4 10h2v4H7v-4zm4-6h2v10h-2V7zm4 3h2v7h-2v-7z"/>
-              </svg>
-              Sales Inquiries
-            </h2>
-            <div class="space-y-3 text-[#5c738a]">
-              <a href="mailto:sales@memoria.io" 
-                 class="flex items-center hover:text-[#3f7fbf] transition-colors">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                sales@memoria.io
-              </a>
-              <div class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                Monday - Friday, 9:00 AM - 6:00 PM (CET)
-              </div>
-            </div>
-          </div>
+          
 
           <!-- General Inquiries Section -->
           <div class="bg-white rounded-lg p-6 shadow-sm">
@@ -48,9 +23,10 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                   d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
               </svg>
-              General Inquiries
+              Get in touch
             </h2>
             <div class="space-y-3 text-[#5c738a]">
+              <p>For product inquiries, consulting, or general questions.</p>
               <a href="mailto:contact@memoria.io" 
                  class="flex items-center hover:text-[#3f7fbf] transition-colors">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

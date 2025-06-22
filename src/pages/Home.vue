@@ -192,8 +192,8 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-[#101418] font-medium">Startups and Scale-ups</h3>
-              <p class="text-sm text-[#5c738a] mt-1">Accelerating growth with modern tech</p>
+              <h3 class="text-[#101418] font-medium">Tech-Driven Startups</h3>
+              <p class="text-sm text-[#5c738a] mt-1">Launching new products or platforms, looking for high-performance backend foundations and fast delivery without heavyweight frameworks.</p>
             </div>
           </div>
 
@@ -204,8 +204,8 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-[#101418] font-medium">SMEs</h3>
-              <p class="text-sm text-[#5c738a] mt-1">Digital transformation journey</p>
+              <h3 class="text-[#101418] font-medium">Growing Engineering Teams</h3>
+              <p class="text-sm text-[#5c738a] mt-1">Mid-sized companies scaling services or migrating from legacy stacks, needing solid architecture, observability, and infrastructure automation.</p>
             </div>
           </div>
 
@@ -216,8 +216,8 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-[#101418] font-medium">Technical Teams</h3>
-              <p class="text-sm text-[#5c738a] mt-1">Cloud-native expertise</p>
+              <h3 class="text-[#101418] font-medium">Platform Engineering Teams</h3>
+              <p class="text-sm text-[#5c738a] mt-1">Standardizing infrastructure and deployment practices across services, with a focus on consistency, scalability, and modern tooling like Kubernetes and GitOps.</p>
             </div>
           </div>
         </div>
