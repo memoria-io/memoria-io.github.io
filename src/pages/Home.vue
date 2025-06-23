@@ -121,11 +121,18 @@
                       <span class="text-green-500 flex-shrink-0">●</span>
                       <span class="text-[#101418] font-medium">Project Helium</span>
                     </div>
-                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Cloud-native Java Microservice Foundation with AI
-                      Support Included</div>
+                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Cloud-native Java microservice foundation with AI support.
+                      <a href="/products#helium" target="_blank" rel="noopener noreferrer"
+                        class="ml-2 text-[#3f7fbf] hover:text-[#2d5d8f]">
+                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                   <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-                    Released
+                    Release Candidate
                   </div>
                 </div>
 
@@ -135,10 +142,18 @@
                       <span class="text-yellow-500 flex-shrink-0">●</span>
                       <span class="text-[#101418] font-medium">Project Argon</span>
                     </div>
-                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Composable Infrastructure Stack for Distributed Systems</div>
+                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Composable infrastructure stack for distributed systems
+                      <a href="/products#argon" target="_blank" rel="noopener noreferrer"
+                        class="ml-2 text-[#3f7fbf] hover:text-[#2d5d8f]">
+                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                   <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
-                    Testing
+                    Alpha
                   </div>
                 </div>
 
@@ -148,10 +163,10 @@
                       <span class="text-blue-500 flex-shrink-0">●</span>
                       <span class="text-[#101418] font-medium">Project Nota.sh</span>
                     </div>
-                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Knowledge Management and Collaboration</div>
+                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Knowledge management and collaboration</div>
                   </div>
                   <div class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
-                    In Progress
+                    Pre-Alpha
                   </div>
                 </div>
 
@@ -173,7 +188,7 @@
                     </div>
                   </div>
                   <div class="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
-                    Available
+                    General Availability
                   </div>
                 </div>
               </div>

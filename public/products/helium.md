@@ -1,7 +1,5 @@
 # Project Helium
 
-## Product Brief
-
 ### Overview
 
 **Project Helium** is a Java <sup>(JDK 24)</sup> microservice foundation designed to help teams move faster without compromising on quality. Whether you're launching a new product or modernizing legacy systems, it provides secure defaults, a scalable architecture, and a clear project structure—so your team can build on a solid foundation instead of starting from scratch.
@@ -111,8 +109,6 @@ Spring WebFlux addresses concurrency through reactive programming using types li
 Helium, built on Helidon SE 4 and virtual threads, sidesteps both limitations. It offers high concurrency with simple, blocking code—no reactive overhead, no thread pool micromanagement. The result: lower operational risk, predictable performance, and faster delivery.
 
 ---
-
-## Technical Overview
 
 ### Architecture Highlights
 
