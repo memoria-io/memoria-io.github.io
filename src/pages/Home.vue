@@ -105,7 +105,7 @@
               </div>
             </div>
           </section>
-          
+
 
         </div>
 
@@ -119,9 +119,10 @@
                   <div class="flex-1">
                     <div class="flex items-center gap-3">
                       <span class="text-green-500 flex-shrink-0">●</span>
-                      <span class="text-[#101418] font-medium">Cloud-native Java Microservice Foundation</span>
+                      <span class="text-[#101418] font-medium">Project Helium</span>
                     </div>
-                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">AI Support Included</div>
+                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Cloud-native Java Microservice Foundation with AI
+                      Support Included</div>
                   </div>
                   <div class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
                     Released
@@ -132,12 +133,12 @@
                   <div class="flex-1">
                     <div class="flex items-center gap-3">
                       <span class="text-yellow-500 flex-shrink-0">●</span>
-                      <span class="text-[#101418] font-medium">Infrastructure as a Service</span>
+                      <span class="text-[#101418] font-medium">Project Argon</span>
                     </div>
-                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Cloud Infrastructure Management</div>
+                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Composable Infrastructure Stack for Distributed Systems</div>
                   </div>
                   <div class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
-                    Alpha
+                    Testing
                   </div>
                 </div>
 
@@ -145,9 +146,9 @@
                   <div class="flex-1">
                     <div class="flex items-center gap-3">
                       <span class="text-blue-500 flex-shrink-0">●</span>
-                      <span class="text-[#101418] font-medium">Knowledge Management and Collaboration</span>
+                      <span class="text-[#101418] font-medium">Project Nota.sh</span>
                     </div>
-                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">SaaS Platform</div>
+                    <div class="ml-6 mt-1 text-sm text-[#5c738a]">Knowledge Management and Collaboration</div>
                   </div>
                   <div class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
                     In Progress
@@ -158,7 +159,7 @@
                   <div class="flex-1">
                     <div class="flex items-center gap-3">
                       <span class="text-gray-500 flex-shrink-0">●</span>
-                      <span class="text-[#101418] font-medium">Opensource Utilities</span>
+                      <span class="text-[#101418] font-medium">Memoria's Opensource Utilities</span>
                     </div>
                     <div class="ml-6 mt-1 text-sm text-[#5c738a] flex items-center">
                       Available on GitHub
@@ -193,31 +194,36 @@
             </div>
             <div>
               <h3 class="text-[#101418] font-medium">Tech-Driven Startups</h3>
-              <p class="text-sm text-[#5c738a] mt-1">Launching new products or platforms, looking for high-performance backend foundations and fast delivery without heavyweight frameworks.</p>
+              <p class="text-sm text-[#5c738a] mt-1">Launching new products or platforms, looking for high-performance
+                backend foundations and fast delivery without heavyweight frameworks.</p>
             </div>
           </div>
 
           <div class="flex items-center p-6 rounded-lg bg-[#3f7fbf] bg-opacity-5 hover:bg-opacity-10 transition-colors">
             <div class="bg-[#3f7fbf] bg-opacity-10 p-3 rounded-full mr-4">
               <svg class="w-6 h-6 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </div>
             <div>
               <h3 class="text-[#101418] font-medium">Growing Engineering Teams</h3>
-              <p class="text-sm text-[#5c738a] mt-1">Mid-sized companies scaling services or migrating from legacy stacks, needing solid architecture, observability, and infrastructure automation.</p>
+              <p class="text-sm text-[#5c738a] mt-1">Mid-sized companies scaling services or migrating from legacy
+                stacks, needing solid architecture, observability, and infrastructure automation.</p>
             </div>
           </div>
 
           <div class="flex items-center p-6 rounded-lg bg-[#3f7fbf] bg-opacity-5 hover:bg-opacity-10 transition-colors">
             <div class="bg-[#3f7fbf] bg-opacity-10 p-3 rounded-full mr-4">
               <svg class="w-6 h-6 text-[#3f7fbf]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
               </svg>
             </div>
             <div>
               <h3 class="text-[#101418] font-medium">Platform Engineering Teams</h3>
-              <p class="text-sm text-[#5c738a] mt-1">Standardizing infrastructure and deployment practices across services, with a focus on consistency, scalability, and modern tooling like Kubernetes and GitOps.</p>
+              <p class="text-sm text-[#5c738a] mt-1">Standardizing infrastructure and deployment practices across
+                services, with a focus on consistency, scalability, and modern tooling like Kubernetes and GitOps.</p>
             </div>
           </div>
         </div>
@@ -230,10 +236,12 @@
           Learn more about our products and services or get in touch with our team to discuss your needs.
         </p>
         <div class="flex justify-center gap-4">
-          <router-link to="/products" class="inline-flex items-center px-6 py-3 bg-[#3f7fbf] text-white rounded-lg hover:bg-[#2d5d8f] transition-colors">
+          <router-link to="/products"
+            class="inline-flex items-center px-6 py-3 bg-[#3f7fbf] text-white rounded-lg hover:bg-[#2d5d8f] transition-colors">
             View Products
           </router-link>
-          <router-link to="/contact" class="inline-flex items-center px-6 py-3 border-2 border-[#3f7fbf] text-[#3f7fbf] rounded-lg hover:bg-[#3f7fbf] hover:text-white transition-colors">
+          <router-link to="/contact"
+            class="inline-flex items-center px-6 py-3 border-2 border-[#3f7fbf] text-[#3f7fbf] rounded-lg hover:bg-[#3f7fbf] hover:text-white transition-colors">
             Contact Us
           </router-link>
         </div>

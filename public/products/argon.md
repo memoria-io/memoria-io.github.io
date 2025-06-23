@@ -1,21 +1,51 @@
-# Project Argon  
+# Project Argon
 
-**Composable Infrastructure as Code Stack for Microservices**  
-A modular, layered IaC toolkit for provisioning, bootstrapping, and managing Kubernetes platforms—from bare metal to GitOps.
+## Product Brief
 
-**Build distributed systems from bare metal to production-ready Kubernetes—automatically.**  
-This modular platform toolkit automates every step of infrastructure setup, from VM provisioning to Kubernetes bootstrap, observability, and GitOps-based application delivery. With cleanly separated layers, each part can be reused, extended, or replaced independently—giving you full control without vendor lock-in.
+**Composable Infrastructure Stack for Distributed Systems**
 
-## Layered Architecture & Cloud Model Alignment
+Project Argon is a layered, modular Infrastructure as Code (IaC) toolkit built for running microservices across environments—from bare metal to production Kubernetes. It automates the entire stack, including virtualization, container orchestration, platform tooling, and GitOps-based application delivery.
 
-- **Host Provisioning Layer** *(Infrastructure as a Service – IaaS)*  
-  Sets up the base infrastructure: virtualization (KVM), networking, and OS provisioning. Equivalent to managing your own compute layer, similar to what cloud providers abstract as IaaS.
+Inspired by real-world needs, it provides a composable alternative to public cloud platforms for teams looking to self-host, reduce costs, or retain infrastructure control using platforms like DigitalOcean—while staying compatible with any managed Kubernetes provider. Each layer of Argon can be used selectively, enabling infrastructure setups ranging from full control (bare metal) to hybrid models (DigitalOcean, Vultr, Hetzner) or outer-layer GitOps overlays on top of fully managed services (like AWS EKS).
 
-- **Cluster Bootstrap Layer** *(Container as a Service – CaaS)*  
-  Installs Kubernetes (K3s) on provisioned hosts. Delivers a container orchestration platform similar to services like EKS, GKE, or AKS—giving you control over the Kubernetes control plane and node infrastructure.
+> Project Argon is currently in **alpha release**—actively tested while not yet production-hardened, it’s available for early access, technical evaluation, and collaboration. Teams interested in using or shaping the roadmap are welcome to [get in touch](/contact).
 
-- **Core Services Layer** *(Platform as a Service – PaaS)*  
-  Deploys essential platform tools (ArgoCD, Helm, Signoz, Traefik, Keycloak, etc.). Provides a ready-to-use platform layer for service delivery, security, and observability—akin to features offered by commercial PaaS platforms.
+---
 
-- **Application Delivery Layer** *(Developer Platform / Internal Developer Platform – IDP)*  
-  Automates application deployment via GitOps. Focused on developer workflows and CI/CD integration, this layer abstracts infrastructure details and acts like an IDP layer to streamline service delivery on any Kubernetes.
+## Overview
+
+**Build fully functional, production-ready environments from scratch—automatically.**
+
+Argon provisions distributed infrastructure across multiple layers:
+
+![Argon](/images/argon.png)
+
+Each layer is fully modular and can be used independently—ideal for teams that want to build their own stack or integrate with existing environments.
+
+---
+
+## Features
+
+- **Fully modular:** use all layers together or independently—ideal for gradual modernization  
+- **Repeatable and idempotent:** Ansible-powered for consistent local, on-prem, or staging environments  
+- **Production-ready security:** TLS, admin segmentation, VPN patterns, and zero-trust roadmap  
+- **Kubernetes-native stack:** installs only cloud-native tools like Helm, ArgoCD, Signoz  
+- **Built-in observability:** metrics, logging, and tracing via Signoz and OpenTelemetry  
+- **Includes architecture docs:** ADRs, heuristics, and debug guides  
+- **CI/CD and GitOps integration:** example apps with ArgoCD deployment workflows  
+- **Works locally and on the cloud:** suitable for labs, testbeds, and cost-effective setups
+
+---
+
+## Who It's For
+
+- Enterprises needing repeatable staging environments or self-hosted, air-gapped testbeds  
+- Infrastructure teams exploring on-prem solutions before migrating to the cloud  
+- Startups seeking cost-controlled alternatives like DigitalOcean instead of risky pay-as-you-go models  
+- Platform engineering teams building tailored Internal Developer Platform (IDP) capabilities  
+
+## Upcoming Milestones
+
+Currently focused on hardening the stack for production: refining KVM provisioning, securing access (TLS, RBAC, VPN), improving observability (Signoz, Prometheus, Loki), enabling HA K3s setups, and automating GitOps pipelines. We're also enhancing documentation, smoke testing playbooks, and preparing onboarding tooling for platforms like DigitalOcean and Hetzner.
+
+We'll notify you when it's ready—just reach out.
