@@ -161,7 +161,7 @@
                   <div class="flex-1">
                     <div class="flex items-center gap-3">
                       <span class="text-blue-500 flex-shrink-0">●</span>
-                      <span class="text-[#101418] font-medium">Project Nota.sh</span>
+                      <span class="text-[#101418] font-medium">Nota.sh</span>
                     </div>
                     <div class="ml-6 mt-1 text-sm text-[#5c738a]">Knowledge management and collaboration</div>
                   </div>
