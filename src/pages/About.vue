@@ -185,6 +185,108 @@
         </div>
       </section>
 
+      <!-- About the Founder Section -->
+      <section class="mb-16 bg-white rounded-lg p-10 shadow-sm">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-[#101418] text-2xl font-bold mb-8 text-center">About the Founder</h2>
+
+          <!-- Founder Info -->
+          <div class="mb-8">
+            <p class="text-[#5c738a] text-lg leading-relaxed mb-6">
+              Memoria IO was founded by <strong class="text-[#101418]">Ismail Marmoush</strong>, a Software Engineer
+              with over a decade of experience across leading European tech companies.
+            </p>
+            <p class="text-[#5c738a] text-lg leading-relaxed mb-6">
+              He specializes in building resilient distributed systems, developer platforms, and scalable cloud-native
+              solutions—working closely with engineering teams to reduce complexity and improve delivery speed.
+            </p>
+            <p class="text-[#5c738a] text-lg leading-relaxed">
+              You can follow his work on the <router-link to="/blog"
+                class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">Memoria Blog</router-link>, connect on
+              <a href="https://www.linkedin.com/in/ismailmarmoush/" target="_blank" rel="noopener noreferrer"
+                class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">LinkedIn</a>, or reach out directly at
+              <a href="mailto:contact@memoria.io"
+                class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">contact@memoria.io</a>.
+            </p>
+          </div>
+
+          <!-- Testimonials -->
+          <div>
+            <h3 class="text-[#101418] text-lg font-semibold mb-6 text-center">What Clients & Colleagues Say</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Testimonial 1 -->
+              <div class="bg-[#3f7fbf] bg-opacity-5 rounded-lg p-4">
+                <div class="flex items-start mb-3">
+                  <svg class="w-5 h-5 text-[#3f7fbf] mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <div>
+                    <p class="text-[#5c738a] text-sm italic leading-relaxed">
+                      "We managed to more than double our revenue while improving significantly along all parts of our
+                      service. We built the by far best service in curated shopping and the biggest fashion freelance
+                      employer in Europe within 3 years only.
+                      I am especially thankful that you joined our team, as I can see how much you make a positive
+                      impact. The team loves to discuss all technical complexities with you and really acknowledges your
+                      skills and appreciates your opinion. You are having great ideas on how to best set-up our data
+                      initiatives "
+                    </p>
+                    <p class="text-[#101418] font-medium text-sm mt-2">
+                      — CEO, <a href="https://zalando.de" target="_blank" rel="noopener noreferrer"
+                        class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">Zalon By Zalando</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="bg-[#3f7fbf] bg-opacity-5 rounded-lg p-4">
+                <div class="flex items-start mb-3">
+                  <svg class="w-5 h-5 text-[#3f7fbf] mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <div>
+                    <p class="text-[#5c738a] text-sm italic leading-relaxed">
+                      "Ismail, a highly technical and hands-on Software Architect whose expertise in AWS, Java,
+                      Microservices, Kubernetes, and Domain-Driven Design is truly impressive. His disciplined approach
+                      to writing software according to best practices consistently results in robust, scalable solutions
+                      that meet both current and future needs."
+                    </p>
+                    <p class="text-[#101418] font-medium text-sm mt-2">
+                      — VP Engineering, <a href="https://tamias.com" target="_blank" rel="noopener noreferrer"
+                        class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">Tamias</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Testimonial 3 -->
+              <div class="bg-[#3f7fbf] bg-opacity-5 rounded-lg p-4">
+                <div class="flex items-start mb-3">
+                  <svg class="w-5 h-5 text-[#3f7fbf] mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <div>
+                    <p class="text-[#5c738a] text-sm italic leading-relaxed">
+                      "Ismail is one of the best colleagues I've met, I've seen none of his genuine dedication
+                      and effort in any other, perfectionist in a good way, ambitious and very talented and possesses
+                      many skills which he's acquired in a short time span compared to the others, I sincerely hope I
+                      get the chance to work with him again."
+                    </p>
+                    <p class="text-[#101418] font-medium text-sm mt-2">
+                      — Software Architect, Nets Group
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Open Source Section -->
       <section class="bg-[#3f7fbf] bg-opacity-5 rounded-lg p-8 text-center">
         <div class="max-w-3xl mx-auto">
