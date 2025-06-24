@@ -35,21 +35,21 @@
     {
       "id": "grene",
       "filePath": "case-studies/grene.md",
-      "logo": "/images/logos/grene.png",
-      "title": "Grene: Ecommerce Platform",
+      "logo": "/images/logos/grene_kramp.png",
+      "title": "Grene (Kramp Group) – Technical Wholesale Ecommerce",
       "technologies": [
         "Java",
         "JSF",
         "Javascript",
         "MySQL"
       ],
-      "excerpt": "Grene is a leading ecommerce platform in Denmark"
+      "excerpt": "Modernizing Grene's ecommerce platform by identifying and resolving backend performance issues."
     },
     {
       "id": "zalon",
       "filePath": "case-studies/zalon.md",
       "logo": "/images/logos/zalon.png",
-      "title": "Zalon by Zalando: Scalable Data Platform",
+      "title": "Zalon by Zalando: Building a Scalable Data Platform",
       "technologies": [
         "Java",
         "Python",

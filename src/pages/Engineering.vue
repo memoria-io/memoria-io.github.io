@@ -176,7 +176,7 @@
           <div v-for="study in caseStudies" :key="study.id"
                class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer"
                @click="openCaseStudy(study.id)">
-            <div class="p-6">
+            <div class="p-6 flex flex-col h-full">
               <div class="flex items-center gap-3 mb-4">
                 <div class="bg-[#3f7fbf] bg-opacity-10 p-3 rounded-lg">
                   <object v-if="isSvg(study.logo)" :data="study.logo" type="image/svg+xml" class="w-8 h-8 text-[#3f7fbf]">
@@ -186,7 +186,9 @@
                 </div>
                 <h3 class="text-[#101418] text-xl font-semibold">{{ study.title }}</h3>
               </div>
-              <p class="text-[#5c738a] mb-4">{{ study.excerpt }}</p>
+              <p class="text-[#5c738a] mb-4">{{ study.excerpt }} <span class="text-[#3f7fbf] hover:text-[#2d5d8f] transition-colors text-sm font-medium">Learn More →</span></p>
+              
+              <!-- Bottom section with tags -->
               <div class="flex flex-wrap gap-2">
                 <span v-for="tech in study.technologies" :key="tech"
                       class="px-3 py-1 bg-[#3f7fbf] bg-opacity-10 text-[#3f7fbf] rounded-full text-sm">
