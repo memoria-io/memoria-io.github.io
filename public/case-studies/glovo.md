@@ -12,8 +12,6 @@ After optimization, latency dropped to **200–400ms**, significantly improving 
 
 ## ThreadLocal Transaction Trap
 
-<img src="/images/mariana.png" alt="drawing" width="300"/>
-
 A threading workaround in the monolith used `ThreadLocal` to pass context, bypassing standard thread-per-request patterns. Combined with nested `@Transactional` annotations, this caused unexpected behavior and elevated DB load, culminating in a 50% spike.
 
 Through deep debugging and documentation, I isolated and reproduced the issue. Another team shipped the patch, reducing **database load by 50%**.
