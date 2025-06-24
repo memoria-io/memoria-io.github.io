@@ -39,11 +39,14 @@
       "title": "Grene (Kramp Group) – Technical Wholesale Ecommerce",
       "technologies": [
         "Java",
+        "Spring",
         "JSF",
+        "JPA",
+        "Hibernate",
         "Javascript",
         "MySQL"
       ],
-      "excerpt": "Modernizing Grene's ecommerce platform by identifying and resolving backend performance issues."
+      "excerpt": "Optimizing Grene's ecommerce platform by identifying and resolving back and front end bottlenecks."
     },
     {
       "id": "zalon",
@@ -110,13 +113,16 @@
       "id": "tamias",
       "filePath": "case-studies/tamias.md",
       "logo": "/images/logos/tamias.png",
-      "title": "Tamias: POS Solution",
+      "title": "Tamias: POS Desktop to Cloud Assesment and Roadmap",
       "technologies": [
-        "Kafka",
-        "Spring",
-        "PostgreSQL"
+        "Java",
+        "Swing",
+        "Netbeans",
+        "Hibernate",
+        "JPA",
+        "MySQL"
       ],
-      "excerpt": "Built a high-performance e-commerce platform handling 1M+ daily users."
+      "excerpt": "Tamias POS used in Fifa 2022, "
     }
   ]
 }
