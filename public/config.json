@@ -51,26 +51,35 @@
       "id": "jobandtalent",
       "filePath": "case-studies/jobandtalent.md",
       "logo": "/images/logos/jobandtalent.png",
-      "title": "Architecture and Technology Migration - Jobandtalent",
+      "title": "Jobandtalent: Architecture and Technology Migration",
       "technologies": [
-        "Java",
-        "Kubernetes"
+        "Kotlin",
+        "Ruby",
+        "Spring",
+        "JPA",
+        "PostgreSQL",
+        "Gradle",
+        "Kubernetes",
+        "Kafka",
+        "Redis",
+        "AWS"
       ],
-      "excerpt": "Architected a microservices platform for a leading FinTech company."
+      "excerpt": "Company-wide Kotlin service reference, architectural documentation, and CI/CD time and cost optimization."
     },
     {
       "id": "glovo",
       "filePath": "case-studies/glovo.md",
       "logo": "/images/logos/glovo.svg",
-      "title": "Glovo: Optimizing Home page performance and scalable API",
+      "title": "Glovo: Monolith to Microservices Transformation",
       "technologies": [
         "Java",
         "Spring",
+        "Play Framework",
         "AWS",
         "Kubernetes",
         "Redis"
       ],
-      "excerpt": "Developed a HIPAA-compliant healthcare platform serving 50+ hospitals."
+      "excerpt": "Deep threads debugging. Definition and implementation of the extraction of the homepage backend from a monolith into a standalone microservice, optimizing legacy logic and reducing infrastructure costs."
     },
     {
       "id": "zalando",

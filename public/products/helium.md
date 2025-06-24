@@ -18,11 +18,11 @@ It also supports **LLM-based use cases** through integration with [LangChain4j](
 
 ### Motivation
 
-Building microservices remains a recurring challenge. While most services today follow well established patterns, technoglogies and tooling not every medium sized company or Startup has the engineering maturity or architectural expertise to apply them correctly specifically from the start. [Case Study: Zalando’s Zalon](/blog/zalon)
+Building microservices remains a recurring challenge. While most services today follow well established patterns, technoglogies and tooling not every medium sized company or Startup has the engineering maturity or architectural expertise to apply them correctly specifically from the start. [Case Study: Zalando’s Zalon](/engineering#zalon)
 
-SMEs and startups, in particular also face intense time-to-market pressure and limited resources. Without dedicated architecture or platform teams, they often prioritize delivery speed over long-term maintainability. [Case Study: Glovo](/blog/glovo)
+SMEs and startups, in particular also face intense time-to-market pressure and limited resources. Without dedicated architecture or platform teams, they often prioritize delivery speed over long-term maintainability. [Case Study: Glovo](/engineering#glovo)
 
-The same applies to organizations migrating from slower monolithic stacks (e.g., PHP, Ruby, Python) to more scalable, cost-efficient architectures using Java, Kotlin, or Go. Expectations are high, but these efforts are often driven by teams with deep experience in the old stack and limited familiarity with the new one. Combined with the difficulty of hiring experienced engineers, the risks quickly start to compound. [Case Study: Jobandtalent](/blog/jobandtalent)
+The same applies to organizations migrating from slower monolithic stacks (e.g., PHP, Ruby, Python) to more scalable, cost-efficient architectures using Java, Kotlin, or Go. Expectations are high, but these efforts are often driven by teams with deep experience in the old stack and limited familiarity with the new one. Combined with the difficulty of hiring experienced engineers, the risks quickly start to compound. [Case Study: Jobandtalent](/engineering#jobandtalent)
 
 As a result, core design concerns—such as modularity, observability, and security—are postponed or inconsistently implemented, leading to architectural drift and increasing technical debt. Under pressure, foundational choices are often rushed, producing brittle systems that are difficult to evolve.
 
