@@ -33,20 +33,60 @@
   ],
   "caseStudies": [
     {
-      "id": "grene",
-      "filePath": "case-studies/grene.md",
-      "logo": "/images/logos/grene_kramp.png",
-      "title": "Grene (Kramp Group) – Technical Wholesale Ecommerce",
+      "id": "tamias",
+      "filePath": "case-studies/tamias.md",
+      "logo": "/images/logos/tamias.png",
+      "title": "Tamias: Cloud Transformation Journey",
+      "technologies": [
+        "Java",
+        "Swing",
+        "Netbeans",
+        "Hibernate",
+        "JPA",
+        "MySQL"
+      ],
+      "excerpt": "Tamias POS used in Fifa 2022, "
+    },
+    {
+      "id": "jobandtalent",
+      "filePath": "case-studies/jobandtalent.md",
+      "logo": "/images/logos/jobandtalent.png",
+      "title": "Architecture and Technology Migration - Jobandtalent",
+      "technologies": [
+        "Java",
+        "Kubernetes"
+      ],
+      "excerpt": "Architected a microservices platform for a leading FinTech company."
+    },
+    {
+      "id": "glovo",
+      "filePath": "case-studies/glovo.md",
+      "logo": "/images/logos/glovo.svg",
+      "title": "Tier 1 Microservice - Glovo",
       "technologies": [
         "Java",
         "Spring",
-        "JSF",
-        "JPA",
-        "Hibernate",
-        "Javascript",
-        "MySQL"
+        "AWS",
+        "Kubernetes",
+        "Redis"
       ],
-      "excerpt": "Optimizing Grene's ecommerce platform by identifying and resolving back and front end bottlenecks."
+      "excerpt": "Developed a HIPAA-compliant healthcare platform serving 50+ hospitals."
+    },
+    {
+      "id": "zalando",
+      "filePath": "case-studies/zalando.md",
+      "logo": "/images/logos/zalando.svg",
+      "title": "Zalando: ",
+      "technologies": [
+        "Java",
+        "Spring",
+        "Elasticsearch",
+        "Kafka",
+        "Kubernetes",
+        "AWS",
+        "Cloudformation"
+      ],
+      "excerpt": "A leading online fashion retailer. It needed a data platform to support their specific business intelligence needs."
     },
     {
       "id": "zalon",
@@ -66,63 +106,23 @@
         "Cloudformation",
         "Quicksight"
       ],
-      "excerpt": "Zalon is a subsidiary of Zalando, a leading online fashion retailer. It needed a data platform to support their specific business intelligence needs."
+      "excerpt": "Custom-built data platform to support Business Intelligence and Data Science teams with reliable, scalable access to domain-specific data."
     },
     {
-      "id": "zalando",
-      "filePath": "case-studies/zalando.md",
-      "logo": "/images/logos/zalando.svg",
-      "title": "Zalando: ",
+      "id": "grene",
+      "filePath": "case-studies/grene.md",
+      "logo": "/images/logos/grene_kramp.png",
+      "title": "Grene (Kramp Group) – Technical Wholesale Ecommerce",
       "technologies": [
         "Java",
         "Spring",
-        "Elasticsearch",
-        "Kafka",
-        "Kubernetes",
-        "AWS",
-        "Cloudformation"
-      ],
-      "excerpt": "Zalon is a subsidiary of Zalando, a leading online fashion retailer. It needed a data platform to support their specific business intelligence needs."
-    },
-    {
-      "id": "glovo",
-      "filePath": "case-studies/glovo.md",
-      "logo": "/images/logos/glovo.svg",
-      "title": "Tier 1 Microservice - Glovo",
-      "technologies": [
-        "Java",
-        "Spring",
-        "AWS",
-        "Kubernetes",
-        "Redis"
-      ],
-      "excerpt": "Developed a HIPAA-compliant healthcare platform serving 50+ hospitals."
-    },
-    {
-      "id": "jobandtalent",
-      "filePath": "case-studies/jobandtalent.md",
-      "logo": "/images/logos/jobandtalent.png",
-      "title": "Architecture and Technology Migration - Jobandtalent",
-      "technologies": [
-        "Java",
-        "Kubernetes"
-      ],
-      "excerpt": "Architected a microservices platform for a leading FinTech company."
-    },
-    {
-      "id": "tamias",
-      "filePath": "case-studies/tamias.md",
-      "logo": "/images/logos/tamias.png",
-      "title": "Tamias: POS Desktop to Cloud Assesment and Roadmap",
-      "technologies": [
-        "Java",
-        "Swing",
-        "Netbeans",
-        "Hibernate",
+        "JSF",
         "JPA",
+        "Hibernate",
+        "Javascript",
         "MySQL"
       ],
-      "excerpt": "Tamias POS used in Fifa 2022, "
+      "excerpt": "Optimizing Grene's ecommerce platform by identifying and resolving back and front end bottlenecks."
     }
   ]
 }
