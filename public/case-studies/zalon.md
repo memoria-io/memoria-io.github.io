@@ -1,16 +1,13 @@
-# E-commerce Platform
-
 ## Overview
 
-Built a high-performance e-commerce platform handling 1M+ daily users. The platform implements event-driven architecture and real-time inventory management.
+Zalon by Zalando is a fashion platform that connects freelance stylists with customers. To evolve from intuition-led to data-driven decisions, we aimed to leverage Zalando’s internal tooling and data ecosystem.
 
-## Key Achievements
+## From Isolation to Integration
 
-- Handles 1M+ daily active users
-- Real-time inventory updates across 1000+ locations
-- 99.9% order processing uptime
-- Reduced cart abandonment by 40%
+Zalon had been operating in isolation, lagging behind Zalando’s evolving infrastructure. With prior experience in Zalando’s internal developer platform, I led the migration to the new stack—enabling microservice creation and deployment within an hour.
 
-## Technical Implementation
+This transformation paved the way for building Zalon’s first internal Datalake. I led the alignment across data engineers, scientists, product, and business teams. We implemented end-to-end ETL pipelines, GDPR compliance, and unlocked data for experimentation, A/B testing, and advanced analytics.
 
-The platform uses Spring Boot for the backend services, Kafka for event streaming, and PostgreSQL for data storage. We implemented a custom caching layer and real-time inventory management system.
+## Insights
+
+Working across infrastructure, data, and product revealed the impact of high-trust, transparent culture. Clear communication across disciplines enabled unusually fast, effective collaboration and lasting technical outcomes.

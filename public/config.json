@@ -45,7 +45,7 @@
         "JPA",
         "MySQL"
       ],
-      "excerpt": "Tamias POS used in Fifa 2022, "
+      "excerpt": "Modernizing a legacy POS deployed at FIFA 2022 by designing a scalable cloud-native backend and aligning business and engineering across multiple teams."
     },
     {
       "id": "jobandtalent",
@@ -62,7 +62,7 @@
       "id": "glovo",
       "filePath": "case-studies/glovo.md",
       "logo": "/images/logos/glovo.svg",
-      "title": "Tier 1 Microservice - Glovo",
+      "title": "Glovo: Optimizing Home page performance and scalable API",
       "technologies": [
         "Java",
         "Spring",
@@ -76,7 +76,7 @@
       "id": "zalando",
       "filePath": "case-studies/zalando.md",
       "logo": "/images/logos/zalando.svg",
-      "title": "Zalando: ",
+      "title": "Zalando: Operating a Tier-1 Service at Scale",
       "technologies": [
         "Java",
         "Spring",
@@ -86,7 +86,7 @@
         "AWS",
         "Cloudformation"
       ],
-      "excerpt": "A leading online fashion retailer. It needed a data platform to support their specific business intelligence needs."
+      "excerpt": "Ensuring reliability and performance for a core backend service handling 10,000+ requests per second in a high-traffic production environment."
     },
     {
       "id": "zalon",
@@ -106,7 +106,7 @@
         "Cloudformation",
         "Quicksight"
       ],
-      "excerpt": "Custom-built data platform to support Business Intelligence and Data Science teams with reliable, scalable access to domain-specific data."
+      "excerpt": "Custom-built datalake to support Business Intelligence and Data Science teams with reliable, scalable access to domain-specific data."
     },
     {
       "id": "grene",
