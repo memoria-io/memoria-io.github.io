@@ -169,9 +169,18 @@
         </div>
       </section>
 
+      <!-- Case studies Transition -->
+      <section class="mb-12 text-center">
+        <div class="bg-gradient-to-r from-[#3f7fbf] to-[#2d5d8f] rounded-lg p-8 text-white">
+          <h2 class="text-2xl font-bold mb-4">Lessons from the Field</h2>
+          <p class="text-lg opacity-90 max-w-2xl mx-auto">
+            Explore what we've learned building and operating scalable systems across industries and contexts.
+          </p>
+        </div>
+      </section>
+
       <!-- Case Studies -->
       <section class="mb-16" id="case-studies">
-        <h2 class="text-[#101418] text-2xl font-bold mb-8 text-center">Case Studies</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div v-for="study in caseStudies" :key="study.id"
                class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer"

@@ -64,7 +64,7 @@
         "Redis",
         "AWS"
       ],
-      "excerpt": "Company-wide Kotlin service reference, architectural documentation, and CI/CD time and cost optimization."
+      "excerpt": "Company-wide Kotlin service template enabling streamlined Ruby-to-JVM migration. CI/CD optimization "
     },
     {
       "id": "glovo",
