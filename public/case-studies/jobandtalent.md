@@ -1,15 +1,15 @@
 ## Overview
 
-**Jobandtalent** is a leading workforce-as-a-service platform operating across multiple countries, connecting companies with temporary workers in logistics, warehousing, and transportation. It leverages advanced matching algorithms, mobile-first experiences, and scalable infrastructure to streamline hiring, onboarding, and workforce management.
+**Jobandtalent** is a leading workforce-as-a-service platform operating across multiple countries. It connects companies with temporary workers in logistics, warehousing, and transportation through advanced matching algorithms, mobile-first experiences, and scalable cloud infrastructure.
 
-## Ruby to Kotlin Migration
+## Migrating from Ruby to Kotlin
 
-Migrating from a dynamic scripting ecosystem (Ruby) to a statically typed JVM-based stack (Kotlin) involved more than syntax—it required a shift in architectural thinking, from domain modeling to service scaffolding.
+The shift from Ruby to a Kotlin-based JVM stack required more than a language change—it demanded architectural realignment, improved modularity, and stronger type safety.
 
-To ease the transition while teams maintained legacy systems, I delivered a structured reference approach:
+To streamline this transition, I delivered a comprehensive reference foundation:
 
-1. **Kotlin Library** – Reusable modules (e.g., auth, API clients, Kafka ingestion).
-2. **Gradle Plugins** – Shared best practices and code quality tools (linters, formatters, static analyzers).
-3. **Service Scaffold** – A Kotlin Spring Boot foundation based on Hexagonal Architecture and DDD patterns.
+1. **Shared Kotlin Modules** – Reusable code for auth, Kafka, and internal clients.
+2. **Gradle Plugin Library** – Unified configurations, static analysis, and CI standards.
+3. **Service Scaffold** – A production-ready Kotlin Spring Boot base using Hexagonal Architecture and DDD.
 
-With onboarding sessions, documentation, and Q\&As, teams were able to immediately develop new services by following the examples—accelerating delivery and unifying architectural direction.
+> *A structured foundation that helped teams ramp up quickly, maintain consistency, and build confidently across the new stack.*

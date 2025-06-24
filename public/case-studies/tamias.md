@@ -1,15 +1,13 @@
-## Context
+## Overview
 
-Tamias is a point-of-sale (POS) system that was deployed across 320 pop-up stores during the FIFA World Cup Qatar 2022. To meet new operational and scalability demands, the system required a full reassessment of its architecture, code quality, and security posture—along with a roadmap toward a modern cloud-native solution.
+**Tamias** is a point-of-sale (POS) system deployed across 320 pop-up stores during the FIFA World Cup Qatar 2022. To meet evolving operational and scalability demands, the system required a complete reassessment of its architecture, code quality, and security posture—along with a roadmap toward a modern, cloud-native solution.
 
-## Aligning Business & Engineering
+## Bridging Legacy Systems and Organizational Complexity
 
-While the system’s legacy desktop nature presented technical debt, the bigger challenge lay in organizational complexity. Tamias operated across six internal companies, with a seventh being spun up to handle technology. Conway’s Law was fully in effect—technical fragmentation reflected business fragmentation.
+While the desktop-based architecture introduced significant technical debt, the greater challenge was organizational. Tamias operated to serve six internal entities within the parent group, with a new technology company forming during the transition—Conway’s Law in full effect.
 
-The work began with in-depth security reports and code quality reviews of the legacy POS, surfacing critical issues. This led to defining clear technical requirements to align development with business goals, enabling a unified direction.
+Initial efforts centered on in-depth security audits and legacy code reviews, surfacing critical issues. These findings informed the definition of technical requirements aligned with business goals, paving the way for unified execution.
 
-The scope included technical leadership across both legacy and new systems, architecting a scalable AWS-based POS backend, conducting interviews, and refining hiring criteria to strengthen the engineering team.
+The scope included leading the architecture of a scalable AWS-based backend, conducting technical interviews, and refining hiring practices to support the new direction.
 
-## Insights
-
-Some of the most impactful work happens outside the codebase. Organizational clarity and alignment are often harder than solving technical problems—but once addressed, they unlock progress for both engineers and the business. Over time, I’ve learned that challenges begin and end with people and goals—technology is just the path in between.
+> *Some of the hardest problems in tech aren’t in code—they’re in alignment. Solving fragmentation between business and engineering unlocked momentum for both.*
