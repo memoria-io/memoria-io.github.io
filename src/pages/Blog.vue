@@ -8,22 +8,27 @@
             <!-- Blog List -->
             <div class="mb-6">
               <h3 class="text-sm font-medium text-[#5c738a] uppercase tracking-wider mb-3">Blog Posts</h3>
-              <ul class="space-y-2">
-                <li v-for="entry in blogPosts" :key="entry.filePath">
-                  <a 
-                    href="#" 
-                    @click.prevent="loadBlogPost(entry)"
-                    :class="[
-                      'block text-sm py-1 hover:text-[#3f7fbf] transition-colors',
-                      currentArticle?.filePath === entry.filePath 
-                        ? 'text-[#3f7fbf] font-medium' 
-                        : 'text-[#101418]'
-                    ]"
-                  >
-                    {{ entry.title }}
-                  </a>
-                </li>
-              </ul>
+              <div v-if="groupedBlogPosts" class="space-y-4">
+                <div v-for="(posts, year) in groupedBlogPosts" :key="year" class="space-y-2">
+                  <h4 class="text-xs font-semibold text-[#3f7fbf] uppercase tracking-wider">{{ year }}</h4>
+                  <ul class="space-y-1 ml-2">
+                    <li v-for="entry in posts" :key="entry.filePath">
+                      <a 
+                        href="#" 
+                        @click.prevent="loadBlogPost(entry)"
+                        :class="[
+                          'block text-sm py-1 hover:text-[#3f7fbf] transition-colors',
+                          currentArticle?.filePath === entry.filePath 
+                            ? 'text-[#3f7fbf] font-medium' 
+                            : 'text-[#101418]'
+                        ]"
+                      >
+                        {{ entry.title }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Table of Contents -->
@@ -40,6 +45,18 @@
         <div class="flex-1 ml-80">
           <div v-if="error" class="text-red-500">{{ error }}</div>
           <div v-else class="prose dark:prose-invert max-w-none">
+            <!-- Blog Post Header -->
+            <div v-if="currentArticle" class="mb-8 pb-6 border-b border-gray-200">
+              <h1 class="text-3xl font-bold text-[#101418] mb-3">{{ currentArticle.title }}</h1>
+              <div class="flex items-center text-[#5c738a] text-sm">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <time :datetime="currentArticle.lastUpdated">
+                  {{ formatDate(currentArticle.lastUpdated) }}
+                </time>
+              </div>
+            </div>
             <div v-if="content" v-html="content" ref="contentDiv"/>
           </div>
         </div>
@@ -49,7 +66,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch } from 'vue'
+import { ref, onMounted, nextTick, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type BlogPostMeta, AppConfig } from '../services/config'
@@ -65,6 +82,43 @@ const content = ref('')
 const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
+
+const groupedBlogPosts = computed(() => {
+  if (!blogPosts.value) return null
+  
+  const grouped = blogPosts.value.reduce((acc, post) => {
+    const year = new Date(post.lastUpdated).getFullYear().toString()
+    if (!acc[year]) {
+      acc[year] = []
+    }
+    acc[year].push(post)
+    return acc
+  }, {} as Record<string, typeof blogPosts.value>)
+  
+  // Sort posts within each year by date (newest first)
+  Object.keys(grouped).forEach(year => {
+    grouped[year].sort((a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime())
+  })
+  
+  // Sort years in descending order (newest first)
+  const sortedYears = Object.keys(grouped).sort((a, b) => parseInt(b) - parseInt(a))
+  
+  const result: Record<string, typeof blogPosts.value> = {}
+  sortedYears.forEach(year => {
+    result[year] = grouped[year]
+  })
+  
+  return result
+})
+
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString)
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}
 
 const loadBlogPost = async (blogPostMeta: BlogPostMeta) => {
   isLoading.value = true

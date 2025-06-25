@@ -13,22 +13,16 @@
   ],
   "blogPosts": [
     {
-      "filePath": "blog/microservices-architecture.md",
-      "title": "Building Scalable Microservices Architecture",
-      "lastUpdated": "2025-01-15",
-      "excerpt": "Learn how to design and implement scalable microservices architecture for enterprise applications."
+      "filePath": "blog/autocompletion.md",
+      "title": "Debian Autocompletion",
+      "lastUpdated": "2018-01-01",
+      "excerpt": ""
     },
     {
-      "filePath": "blog/java-performance-optimization.md",
-      "title": "Java Performance Optimization Techniques",
-      "lastUpdated": "2025-01-10",
-      "excerpt": "Advanced techniques for optimizing Java applications in production environments."
-    },
-    {
-      "filePath": "blog/kubernetes-best-practices.md",
-      "title": "Kubernetes Best Practices for Production",
-      "lastUpdated": "2025-01-05",
-      "excerpt": "Essential best practices for running Kubernetes clusters in production environments."
+      "filePath": "blog/microservice_without_pizza.md",
+      "title": "How big a microservice should be without pizzas",
+      "lastUpdated": "2020-12-25",
+      "excerpt": ""
     }
   ],
   "caseStudies": [
