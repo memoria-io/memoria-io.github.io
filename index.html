@@ -11,13 +11,17 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-3BKFRKZZGJ', { 'debug_mode': true });
-        window.addEventListener('hashchange', () => {
-            gtag('event', 'page_view', {
-                page_location: window.location.href,
-                page_path: location.pathname + location.hash,
-                page_title: document.title
-            });
+        gtag('config', 'G-3BKFRKZZGJ', { 
+            'debug_mode': true,
+            'page_title': document.title,
+            'page_location': window.location.href
+        });
+
+        // Track initial page load only
+        gtag('event', 'page_view', {
+            page_location: window.location.href,
+            page_path: location.pathname + location.hash,
+            page_title: document.title
         });
     </script>
 </head>
