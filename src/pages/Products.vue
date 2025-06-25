@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch } from 'vue'
+import { ref, onMounted, nextTick, watch, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type ProductMeta, AppConfig } from '../services/config'
@@ -67,6 +67,8 @@ const content = ref('')
 const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
+const hashChangeHandler = ref<((event: HashChangeEvent) => void) | null>(null)
+const popStateHandler = ref<((event: PopStateEvent) => void) | null>(null)
 
 const loadProduct = async (productMeta: ProductMeta) => {
   isLoading.value = true
@@ -77,9 +79,10 @@ const loadProduct = async (productMeta: ProductMeta) => {
     content.value = await parseMarkdown(markdown)
     currentArticle.value = productMeta || null
     
-    // Update URL hash
+    // Update URL hash for hash-based routing
+    // Keep the route structure: /#/products#productId
     const productId = productMeta.filePath.replace('products/', '').replace('.md', '')
-    window.history.pushState({}, '', `#${productId}`)
+    window.location.hash = `/products#${productId}`
     
     // Reset scroll position and wait for content to be rendered
     window.scrollTo(0, 0)
@@ -116,6 +119,23 @@ const loadProductById = async (productId: string) => {
   }
 }
 
+// Helper function to get hash from URL, handling both with and without slashes
+const getHashFromUrl = () => {
+  // With hash routing, the full hash will be like "#/products#argon"
+  const fullHash = window.location.hash
+  
+  // Extract the product hash from the full hash
+  // If hash is "#/products#argon", we want "argon"
+  const hashParts = fullHash.split('#')
+  const productHash = hashParts.length > 2 ? hashParts[2] : null
+  
+  // Fallback to route.hash if available
+  const routeHash = route.hash.slice(1)
+  
+  // Return the product hash or route hash
+  return productHash || routeHash
+}
+
 // Initialize
 onMounted(async () => {
   try {
@@ -123,7 +143,7 @@ onMounted(async () => {
     products.value = appConfig.value.products
     
     // Check for hash in URL
-    const hash = window.location.hash.slice(1)
+    const hash = getHashFromUrl()
     if (hash && products.value.length > 0) {
       await loadProductById(hash)
     } else if (products.value.length > 0) {
@@ -133,11 +153,44 @@ onMounted(async () => {
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load product list'
   }
+  
+  // Add hashchange event listener to handle browser slash insertion
+  const handleHashChange = async () => {
+    const hash = getHashFromUrl()
+    if (hash && products.value) {
+      await loadProductById(hash)
+    }
+  }
+  
+  // Also listen for popstate events (back/forward navigation)
+  const handlePopState = async () => {
+    const hash = getHashFromUrl()
+    if (hash && products.value) {
+      await loadProductById(hash)
+    }
+  }
+  
+  hashChangeHandler.value = handleHashChange
+  popStateHandler.value = handlePopState
+  window.addEventListener('hashchange', handleHashChange)
+  window.addEventListener('popstate', handlePopState)
+})
+
+// Cleanup
+onUnmounted(() => {
+  if (hashChangeHandler.value) {
+    window.removeEventListener('hashchange', hashChangeHandler.value)
+    hashChangeHandler.value = null
+  }
+  if (popStateHandler.value) {
+    window.removeEventListener('popstate', popStateHandler.value)
+    popStateHandler.value = null
+  }
 })
 
 // Watch for hash changes
 watch(() => route.hash, async (newHash) => {
-  const productId = newHash.slice(1)
+  const productId = getHashFromUrl()
   if (productId) {
     await loadProductById(productId)
   }

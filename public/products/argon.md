@@ -10,7 +10,7 @@ Inspired by real-world needs, it provides a composable alternative to public clo
 
 ### Current State
 
-> Project Argon is currently in **alpha release**—actively tested while not yet production-hardened, it’s available for early access, technical evaluation, and collaboration. Teams interested in using or shaping the roadmap are welcome to [get in touch](/contact).
+> Project Argon is currently in **alpha release**—actively tested while not yet production-hardened, it's available for early access, technical evaluation, and collaboration. Teams interested in using or shaping the roadmap are welcome to [get in touch](/#/contact).
 
 ---
 

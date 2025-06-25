@@ -18,15 +18,15 @@ It also supports **LLM-based use cases** through integration with [LangChain4j](
 
 ### Motivation
 
-Building microservices remains a recurring challenge. While most services today follow well established patterns, technoglogies and tooling not every medium sized company or Startup has the engineering maturity or architectural expertise to apply them correctly specifically from the start. [Case Study: Zalando’s Zalon](/engineering#zalon)
+Building microservices remains a recurring challenge. While most services today follow well established patterns, technoglogies and tooling not every medium sized company or Startup has the engineering maturity or architectural expertise to apply them correctly specifically from the start. [Case Study: Zalando's Zalon](/#/engineering#zalon)
 
-SMEs and startups, in particular also face intense time-to-market pressure and limited resources. Without dedicated architecture or platform teams, they often prioritize delivery speed over long-term maintainability. [Case Study: Glovo](/engineering#glovo)
+SMEs and startups, in particular also face intense time-to-market pressure and limited resources. Without dedicated architecture or platform teams, they often prioritize delivery speed over long-term maintainability. [Case Study: Glovo](/#/engineering#glovo)
 
-The same applies to organizations migrating from slower monolithic stacks (e.g., PHP, Ruby, Python) to more scalable, cost-efficient architectures using Java, Kotlin, or Go. Expectations are high, but these efforts are often driven by teams with deep experience in the old stack and limited familiarity with the new one. Combined with the difficulty of hiring experienced engineers, the risks quickly start to compound. [Case Study: Jobandtalent](/engineering#jobandtalent)
+The same applies to organizations migrating from slower monolithic stacks (e.g., PHP, Ruby, Python) to more scalable, cost-efficient architectures using Java, Kotlin, or Go. Expectations are high, but these efforts are often driven by teams with deep experience in the old stack and limited familiarity with the new one. Combined with the difficulty of hiring experienced engineers, the risks quickly start to compound. [Case Study: Jobandtalent](/#/engineering#jobandtalent)
 
 As a result, core design concerns—such as modularity, observability, and security—are postponed or inconsistently implemented, leading to architectural drift and increasing technical debt. Under pressure, foundational choices are often rushed, producing brittle systems that are difficult to evolve.
 
-With the rise of **AI-assisted** development, teams can now generate code faster than ever—but that code still needs a secure and coherent foundation to run reliably. Without architectural guardrails, generated code can introduce inconsistencies, unsafe patterns, or unscalable designs. This project fills that gap by providing a production-grade environment where generated code can operate safely and predictably, reducing human error and avoiding the pitfalls of “vibe coding.”
+With the rise of **AI-assisted** development, teams can now generate code faster than ever—but that code still needs a secure and coherent foundation to run reliably. Without architectural guardrails, generated code can introduce inconsistencies, unsafe patterns, or unscalable designs. This project fills that gap by providing a production-grade environment where generated code can operate safely and predictably, reducing human error and avoiding the pitfalls of "vibe coding."
 
 Project Helium foundation encapsulates proven patterns from large-scale systems. By perfecting the lower layers, it frees teams from reinventing infrastructure—allowing them to focus on what matters most: delivering product value.
 
@@ -67,7 +67,7 @@ As Martin Fowler notes:
 
 - **Sustained Delivery Speed**  
   Prioritizes internal quality to maintain a steady delivery pace as complexity grows.  
-  *E.g., DDD and hexagonal principles provide a structure that scales beyond the initial “stamina curve.”*
+  *E.g., DDD and hexagonal principles provide a structure that scales beyond the initial "stamina curve."*
 
 - **Operational Resilience**  
   Ships with production-grade defaults and hardened patterns for fault tolerance.  
@@ -100,11 +100,11 @@ Its minimal runtime footprint and stateless design make it ideal for modern work
 
 ### Why Not Spring
 
-Spring remains a popular choice for enterprise Java due to its ecosystem and tooling. But in practice, it often introduces unnecessary complexity for modern, high-performance systems—especially in “goal-focused” microservices that need to do one job well with minimal overhead, such as ingesting events, exposing APIs, or performing background tasks.
+Spring remains a popular choice for enterprise Java due to its ecosystem and tooling. But in practice, it often introduces unnecessary complexity for modern, high-performance systems—especially in "goal-focused" microservices that need to do one job well with minimal overhead, such as ingesting events, exposing APIs, or performing background tasks.
 
-Spring MVC relies on a thread-per-request model, requiring constant tuning of thread pools and timeouts—making scaling and infrastructure planning harder. It’s predictable, but heavy on resources, especially under load.
+Spring MVC relies on a thread-per-request model, requiring constant tuning of thread pools and timeouts—making scaling and infrastructure planning harder. It's predictable, but heavy on resources, especially under load.
 
-Spring WebFlux addresses concurrency through reactive programming using types like `Flux` and `Mono` from Project Reactor. These are monads that model asynchronous, event-driven flows—but in doing so, introduce such a functional style that’s difficult to reason about for many teams. Blocking leaks and anti-patterns are common, and the reactive style often leads to verbose code and complex debugging workflows.
+Spring WebFlux addresses concurrency through reactive programming using types like `Flux` and `Mono` from Project Reactor. These are monads that model asynchronous, event-driven flows—but in doing so, introduce such a functional style that's difficult to reason about for many teams. Blocking leaks and anti-patterns are common, and the reactive style often leads to verbose code and complex debugging workflows.
 
 Helium, built on Helidon SE 4 and virtual threads, sidesteps both limitations. It offers high concurrency with simple, blocking code—no reactive overhead, no thread pool micromanagement. The result: lower operational risk, predictable performance, and faster delivery.
 
@@ -158,7 +158,7 @@ Helium, built on Helidon SE 4 and virtual threads, sidesteps both limitations. I
 ### Get in Touch
 
 Want to learn more or see Project Helium in action?  
-[**Get in touch with us**](/contact) to schedule a demo or ask any questions.
+[**Get in touch with us**](/#/contact) to schedule a demo or ask any questions.
 
 [1]: https://technology.amis.nl/software-development/java/microservice-framework-startup-time-on-different-jvms-aot-and-jit/
 [2]: https://medium.com/helidon/helidon-is-the-fastest-9c8d98d519f0

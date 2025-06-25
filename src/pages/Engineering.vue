@@ -244,7 +244,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { marked } from 'marked'
 
@@ -261,6 +261,8 @@ const route = useRoute()
 const selectedCaseStudy = ref<CaseStudy | null>(null)
 const caseStudies = ref<CaseStudy[]>([])
 const config = ref<any>(null)
+const hashChangeHandler = ref<((event: HashChangeEvent) => void) | null>(null)
+const popStateHandler = ref<((event: PopStateEvent) => void) | null>(null)
 
 const isSvg = (filePath: string): boolean => {
   return filePath.toLowerCase().endsWith('.svg')
@@ -279,14 +281,23 @@ const openCaseStudy = async (id: string) => {
       const markdown = await fetchMarkdown(configStudy.filePath)
       study.content = marked(markdown) as string
       selectedCaseStudy.value = study
-      window.history.pushState({}, '', `#${id}`)
+      // Update URL hash for hash-based routing
+      window.location.hash = `/engineering#${id}`
     }
   }
 }
 
 const closeCaseStudy = () => {
   selectedCaseStudy.value = null
-  window.history.pushState({}, '', '#case-studies')
+  // Update URL hash for hash-based routing
+  window.location.hash = '/engineering#case-studies'
+}
+
+// Helper function to get case study ID from URL hash
+const getCaseStudyIdFromHash = () => {
+  const fullHash = window.location.hash
+  const hashParts = fullHash.split('#')
+  return hashParts.length > 2 ? hashParts[2] : null
 }
 
 // Initialize case studies from config
@@ -305,20 +316,57 @@ onMounted(async () => {
     }))
 
     // Handle direct links to case studies
-    const hash = window.location.hash.slice(1)
-    if (hash) {
-      await openCaseStudy(hash)
+    const caseStudyId = getCaseStudyIdFromHash()
+    if (caseStudyId) {
+      await openCaseStudy(caseStudyId)
     }
   } catch (error) {
     console.error('Failed to load case studies:', error)
+  }
+  
+  // Add hashchange event listener to handle browser navigation
+  const handleHashChange = async () => {
+    const caseStudyId = getCaseStudyIdFromHash()
+    if (caseStudyId) {
+      await openCaseStudy(caseStudyId)
+    } else {
+      closeCaseStudy()
+    }
+  }
+  
+  // Also listen for popstate events (back/forward navigation)
+  const handlePopState = async () => {
+    const caseStudyId = getCaseStudyIdFromHash()
+    if (caseStudyId) {
+      await openCaseStudy(caseStudyId)
+    } else {
+      closeCaseStudy()
+    }
+  }
+  
+  hashChangeHandler.value = handleHashChange
+  popStateHandler.value = handlePopState
+  window.addEventListener('hashchange', handleHashChange)
+  window.addEventListener('popstate', handlePopState)
+})
+
+// Cleanup
+onUnmounted(() => {
+  if (hashChangeHandler.value) {
+    window.removeEventListener('hashchange', hashChangeHandler.value)
+    hashChangeHandler.value = null
+  }
+  if (popStateHandler.value) {
+    window.removeEventListener('popstate', popStateHandler.value)
+    popStateHandler.value = null
   }
 })
 
 // Watch for hash changes
 watch(() => route.hash, async (newHash) => {
-  const id = newHash.slice(1)
-  if (id) {
-    await openCaseStudy(id)
+  const caseStudyId = getCaseStudyIdFromHash()
+  if (caseStudyId) {
+    await openCaseStudy(caseStudyId)
   } else {
     closeCaseStudy()
   }

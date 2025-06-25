@@ -122,7 +122,7 @@
                       <span class="text-[#101418] font-medium">Project Helium</span>
                     </div>
                     <div class="ml-6 mt-1 text-sm text-[#5c738a]">Cloud-native Java microservice foundation with AI support.
-                      <a href="/products#helium" target="_blank" rel="noopener noreferrer"
+                      <a href="/#/products#helium" target="_blank" rel="noopener noreferrer"
                         class="ml-2 text-[#3f7fbf] hover:text-[#2d5d8f]">
                         <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -143,7 +143,7 @@
                       <span class="text-[#101418] font-medium">Project Argon</span>
                     </div>
                     <div class="ml-6 mt-1 text-sm text-[#5c738a]">Composable infrastructure stack for distributed systems
-                      <a href="/products#argon" target="_blank" rel="noopener noreferrer"
+                      <a href="/#/products#argon" target="_blank" rel="noopener noreferrer"
                         class="ml-2 text-[#3f7fbf] hover:text-[#2d5d8f]">
                         <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
