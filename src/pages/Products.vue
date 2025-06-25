@@ -13,11 +13,10 @@
               <ul class="space-y-2">
                 <li v-for="entry in products" :key="entry.filePath">
                   <a 
-                    href="#" 
-                    @click.prevent="loadProduct(entry)"
+                    :href="`/products/${getProductSlug(entry)}.html`"
                     :class="[
                       'block text-sm py-1 hover:text-[#3f7fbf] transition-colors',
-                      currentArticle?.filePath === entry.filePath 
+                      isCurrentProduct(entry) 
                         ? 'text-[#3f7fbf] font-medium' 
                         : 'text-[#101418]'
                     ]"
@@ -51,7 +50,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch, onUnmounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type ProductMeta, AppConfig } from '../services/config'
@@ -67,8 +66,21 @@ const content = ref('')
 const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
-const hashChangeHandler = ref<((event: HashChangeEvent) => void) | null>(null)
-const popStateHandler = ref<((event: PopStateEvent) => void) | null>(null)
+
+const getProductSlug = (productMeta: ProductMeta) => {
+  return productMeta.filePath.replace('products/', '').replace('.md', '')
+}
+
+const isCurrentProduct = (productMeta: ProductMeta) => {
+  const currentSlug = route.params.slug || getProductSlugFromPath()
+  return getProductSlug(productMeta) === currentSlug
+}
+
+const getProductSlugFromPath = () => {
+  const path = window.location.pathname
+  const match = path.match(/\/products\/([^\/]+)\.html$/)
+  return match ? match[1] : null
+}
 
 const loadProduct = async (productMeta: ProductMeta) => {
   isLoading.value = true
@@ -78,11 +90,6 @@ const loadProduct = async (productMeta: ProductMeta) => {
     const markdown = await loadDocument(productMeta.filePath)
     content.value = await parseMarkdown(markdown)
     currentArticle.value = productMeta || null
-    
-    // Update URL hash for hash-based routing
-    // Keep the route structure: /#/products#productId
-    const productId = productMeta.filePath.replace('products/', '').replace('.md', '')
-    window.location.hash = `/products#${productId}`
     
     // Reset scroll position and wait for content to be rendered
     window.scrollTo(0, 0)
@@ -106,34 +113,14 @@ const loadProduct = async (productMeta: ProductMeta) => {
   }
 }
 
-const loadProductById = async (productId: string) => {
+const loadProductBySlug = async (slug: string) => {
   if (!products.value) return
   
-  const product = products.value.find(p => {
-    const id = p.filePath.replace('products/', '').replace('.md', '')
-    return id === productId
-  })
+  const product = products.value.find(p => getProductSlug(p) === slug)
   
   if (product) {
     await loadProduct(product)
   }
-}
-
-// Helper function to get hash from URL, handling both with and without slashes
-const getHashFromUrl = () => {
-  // With hash routing, the full hash will be like "#/products#argon"
-  const fullHash = window.location.hash
-  
-  // Extract the product hash from the full hash
-  // If hash is "#/products#argon", we want "argon"
-  const hashParts = fullHash.split('#')
-  const productHash = hashParts.length > 2 ? hashParts[2] : null
-  
-  // Fallback to route.hash if available
-  const routeHash = route.hash.slice(1)
-  
-  // Return the product hash or route hash
-  return productHash || routeHash
 }
 
 // Initialize
@@ -142,57 +129,16 @@ onMounted(async () => {
     appConfig.value = await fetchAppConfig()
     products.value = appConfig.value.products
     
-    // Check for hash in URL
-    const hash = getHashFromUrl()
-    if (hash && products.value.length > 0) {
-      await loadProductById(hash)
+    // Check for product slug in URL path
+    const slug = getProductSlugFromPath()
+    if (slug && products.value.length > 0) {
+      await loadProductBySlug(slug)
     } else if (products.value.length > 0) {
       // Load first product by default
       await loadProduct(appConfig.value.products[0])
     }
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load product list'
-  }
-  
-  // Add hashchange event listener to handle browser slash insertion
-  const handleHashChange = async () => {
-    const hash = getHashFromUrl()
-    if (hash && products.value) {
-      await loadProductById(hash)
-    }
-  }
-  
-  // Also listen for popstate events (back/forward navigation)
-  const handlePopState = async () => {
-    const hash = getHashFromUrl()
-    if (hash && products.value) {
-      await loadProductById(hash)
-    }
-  }
-  
-  hashChangeHandler.value = handleHashChange
-  popStateHandler.value = handlePopState
-  window.addEventListener('hashchange', handleHashChange)
-  window.addEventListener('popstate', handlePopState)
-})
-
-// Cleanup
-onUnmounted(() => {
-  if (hashChangeHandler.value) {
-    window.removeEventListener('hashchange', hashChangeHandler.value)
-    hashChangeHandler.value = null
-  }
-  if (popStateHandler.value) {
-    window.removeEventListener('popstate', popStateHandler.value)
-    popStateHandler.value = null
-  }
-})
-
-// Watch for hash changes
-watch(() => route.hash, async (newHash) => {
-  const productId = getHashFromUrl()
-  if (productId) {
-    await loadProductById(productId)
   }
 })
 </script>

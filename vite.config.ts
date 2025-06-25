@@ -8,4 +8,11 @@ export default defineConfig({
     css: {
         postcss,
     },
+    build: {
+        rollupOptions: {
+            input: {
+                main: 'index.html',
+            },
+        },
+    },
 })

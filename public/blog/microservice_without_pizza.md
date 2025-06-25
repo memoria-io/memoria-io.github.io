@@ -6,7 +6,7 @@
 
 > *Note: This article explores microservices at a holistic level—not per DDD-bounded context. References to size or "big" are shorthand for complexity.*
 
-Complexity sneaks in for many reasons: [orphaned projects](/#/blog#orphaned_projects), fear of recreating a monolith, or accidental architectural sprawl. While there are plenty of [analysis tools](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) and [techniques](https://blog.codacy.com/an-in-depth-explanation-of-code-complexity/) for reasoning about code, they rarely help you answer the real question:
+Complexity sneaks in for many reasons: [orphaned projects](/blog/orphaned_projects.html), fear of recreating a monolith, or accidental architectural sprawl. While there are plenty of [analysis tools](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) and [techniques](https://blog.codacy.com/an-in-depth-explanation-of-code-complexity/) for reasoning about code, they rarely help you answer the real question:
 
 > **When is a service too complex to keep as-is—and worth the cost of splitting or redesigning?**
 
