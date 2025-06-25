@@ -66,8 +66,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick, watch, computed, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, onMounted, nextTick, watch, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type BlogPostMeta, AppConfig } from '../services/config'
 import { loadDocument } from '../services/resources'
@@ -75,6 +75,7 @@ import TableOfContents from '../components/TableOfContents.vue'
 
 // State
 const route = useRoute()
+const router = useRouter()
 const appConfig = ref<AppConfig | null>(null)
 const blogPosts = ref<BlogPostMeta[] | null>(null)
 const currentArticle = ref<BlogPostMeta | null>(null)
@@ -82,8 +83,6 @@ const content = ref('')
 const contentDiv = ref<HTMLElement | null>(null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
-const hashChangeHandler = ref<((event: HashChangeEvent) => void) | null>(null)
-const popStateHandler = ref<((event: PopStateEvent) => void) | null>(null)
 
 const groupedBlogPosts = computed(() => {
   if (!blogPosts.value) return null
@@ -130,10 +129,9 @@ const loadBlogPost = async (blogPostMeta: BlogPostMeta) => {
     content.value = await parseMarkdown(markdown)
     currentArticle.value = blogPostMeta || null
     
-    // Update URL hash for hash-based routing
-    // Keep the route structure: /#/blog#postId
+    // Update URL to use route parameter
     const postId = blogPostMeta.filePath.replace('blog/', '').replace('.md', '')
-    window.location.hash = `/blog#${postId}`
+    await router.push(`/blog/${postId}`)
     
     // Reset scroll position and wait for content to be rendered
     window.scrollTo(0, 0)
@@ -170,21 +168,14 @@ const loadBlogPostById = async (postId: string) => {
   }
 }
 
-// Helper function to get blog post ID from URL hash
-const getBlogPostIdFromHash = () => {
-  const fullHash = window.location.hash
-  const hashParts = fullHash.split('#')
-  return hashParts.length > 2 ? hashParts[2] : null
-}
-
 // Initialize
 onMounted(async () => {
   try {
     appConfig.value = await fetchAppConfig()
     blogPosts.value = appConfig.value.blogPosts
     
-    // Check for hash in URL
-    const postId = getBlogPostIdFromHash()
+    // Check for post ID in route parameter
+    const postId = route.params.postId as string
     if (postId && blogPosts.value.length > 0) {
       await loadBlogPostById(postId)
     } else if (blogPosts.value.length > 0) {
@@ -194,46 +185,12 @@ onMounted(async () => {
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load blog list'
   }
-  
-  // Add hashchange event listener to handle browser navigation
-  const handleHashChange = async () => {
-    const postId = getBlogPostIdFromHash()
-    if (postId && blogPosts.value) {
-      await loadBlogPostById(postId)
-    }
-  }
-  
-  // Also listen for popstate events (back/forward navigation)
-  const handlePopState = async () => {
-    const postId = getBlogPostIdFromHash()
-    if (postId && blogPosts.value) {
-      await loadBlogPostById(postId)
-    }
-  }
-  
-  hashChangeHandler.value = handleHashChange
-  popStateHandler.value = handlePopState
-  window.addEventListener('hashchange', handleHashChange)
-  window.addEventListener('popstate', handlePopState)
 })
 
-// Cleanup
-onUnmounted(() => {
-  if (hashChangeHandler.value) {
-    window.removeEventListener('hashchange', hashChangeHandler.value)
-    hashChangeHandler.value = null
-  }
-  if (popStateHandler.value) {
-    window.removeEventListener('popstate', popStateHandler.value)
-    popStateHandler.value = null
-  }
-})
-
-// Watch for hash changes
-watch(() => route.hash, async (newHash) => {
-  const postId = getBlogPostIdFromHash()
-  if (postId) {
-    await loadBlogPostById(postId)
+// Watch for route parameter changes
+watch(() => route.params.postId, async (newPostId) => {
+  if (newPostId && blogPosts.value) {
+    await loadBlogPostById(newPostId as string)
   }
 })
 </script>

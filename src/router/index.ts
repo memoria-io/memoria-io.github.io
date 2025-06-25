@@ -20,9 +20,12 @@ const router = createRouter({
     routes: [
         { path: '/', name: 'home', component: Home },
         { path: '/products', name: 'products', component: Products },
+        { path: '/products/:productId', name: 'product-detail', component: Products },
         { path: '/blog', name: 'blog', component: Blog },
+        { path: '/blog/:postId', name: 'blog-post-detail', component: Blog },
         { path: '/about', name: 'about', component: About },
         { path: '/engineering', name: 'engineering', component: Engineering },
+        { path: '/engineering/:caseStudyId', name: 'case-study-detail', component: Engineering },
         { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicy },
         { path: '/terms-of-service', name: 'terms-of-service', component: TermsOfService },
         { path: '/contact', name: 'contact', component: Contact }
