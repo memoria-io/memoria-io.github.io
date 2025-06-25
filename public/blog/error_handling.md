@@ -1,5 +1,3 @@
-# Error handling in Java for the Reactive Functional rebels
-
 Have you wondered how to safely propagate errors and exceptions including the ones that are unknown (aka being
 Reactively **Resilient** )  from the very bottom layer of Repositories and DAOs up to the API ?
 
@@ -97,8 +95,4 @@ case would be to send an event or a message to a message bus, would almost be sa
 * In case anything blows, Reactor has error() signal in its Mono and Flux, and Reactor Netty would deal with those as
   Internal error and convert them into a `500` .
 
-Stay tuned for previous shortcuts and utility methods are being put
-in [https://github.com/ismailmarmoush/jutils](https://github.com/ismailmarmoush/jutils)
-one by one. Feel free to star or follow, and PRs are very welcome.
-
-![meme](/assets/posts/memes/exceptions_seinfeld.jpg)
+Stay tuned for previous shortcuts and utility methods are being put in [github/jutils](https://github.com/ismailmarmoush/jutils) one by one. Feel free to star or follow, and PRs are very welcome.

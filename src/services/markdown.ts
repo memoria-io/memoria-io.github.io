@@ -4,12 +4,13 @@ import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-java'
 import 'prismjs/components/prism-json'
 import 'prismjs/components/prism-markdown'
 
 // Configure marked
 marked.setOptions({
-  breaks: true
+  breaks: false
 })
 
 export const parseMarkdown = async (text: string): Promise<string> => {

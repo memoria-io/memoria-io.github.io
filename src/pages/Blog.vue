@@ -9,10 +9,10 @@
             <div class="mb-6">
               <h3 class="text-sm font-medium text-[#5c738a] uppercase tracking-wider mb-3">Blog Posts</h3>
               <div v-if="groupedBlogPosts" class="space-y-4">
-                <div v-for="(posts, year) in groupedBlogPosts" :key="year" class="space-y-2">
-                  <h4 class="text-xs font-semibold text-[#3f7fbf] uppercase tracking-wider">{{ year }}</h4>
+                <div v-for="yearGroup in groupedBlogPosts" :key="yearGroup.year" class="space-y-2">
+                  <h4 class="text-xs font-semibold text-[#3f7fbf] uppercase tracking-wider">{{ yearGroup.year }}</h4>
                   <ul class="space-y-1 ml-2">
-                    <li v-for="entry in posts" :key="entry.filePath">
+                    <li v-for="entry in yearGroup.posts" :key="entry.filePath">
                       <a 
                         href="#" 
                         @click.prevent="loadBlogPost(entry)"
@@ -86,6 +86,7 @@ const error = ref<string | null>(null)
 const groupedBlogPosts = computed(() => {
   if (!blogPosts.value) return null
   
+  // Group posts by year
   const grouped = blogPosts.value.reduce((acc, post) => {
     const year = new Date(post.lastUpdated).getFullYear().toString()
     if (!acc[year]) {
@@ -100,15 +101,13 @@ const groupedBlogPosts = computed(() => {
     grouped[year].sort((a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime())
   })
   
-  // Sort years in descending order (newest first)
-  const sortedYears = Object.keys(grouped).sort((a, b) => parseInt(b) - parseInt(a))
+  // Get years and sort them in descending order, then create array of year groups
+  const years = Object.keys(grouped).sort((a, b) => parseInt(b) - parseInt(a))
   
-  const result: Record<string, typeof blogPosts.value> = {}
-  sortedYears.forEach(year => {
-    result[year] = grouped[year]
-  })
-  
-  return result
+  return years.map(year => ({
+    year,
+    posts: grouped[year]
+  }))
 })
 
 const formatDate = (dateString: string): string => {

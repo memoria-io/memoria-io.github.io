@@ -1,5 +1,3 @@
-# Orphaned projects
-
 As mentioned in previous post, a good software is, a software that evolves easily, one that new comer engineers would
 understand it in a small amount of time instead of struggling with it for more than a month.
 

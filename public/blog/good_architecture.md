@@ -1,11 +1,5 @@
 
-# What it feels in a good architecture
-
-1. Measuring good design
-2. Testing (TDD or else) and its influence on Dependency Injection design and mocking
-3. DDD, Clean architecture, and Explicit Architecture effect
-
-## 1. Measurements
+## Measurement
 
 The world wouldn't work without measuring things, without a reference we go back to, right ?, a gut feeling can't be
 transmitted between humans, unless there is trust / belief.
@@ -22,9 +16,9 @@ code, seamlessly again."
 Basically fulfilling the good design
 of  [Martin Fowler's Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)
 
-![Martin Fowler Design Stamina Hypothesis](/assets/posts/martinfowlerdesign.png)
+![Martin Fowler Design Stamina Hypothesis](/images/design_stamina.png)
 
-## 2. Testing is a sign of healthy architecture design
+## Testing is a sign of healthy architecture design
 
 We all know, no body writes good code documentation, you can't simply explain how a class would work with other classes
 in the same package.
@@ -51,7 +45,7 @@ Some say, yea but constructor becomes bloated with arguments, well I consider th
 You most probably have damn Big Ball of Mud , a Monolith, where your services contain tons of other services and you can
 no longer fill the constructor with that amount of dependencies.
 
-## 3. Modules/Packages/Sub Projects convention
+## Modules/Packages/Sub Projects convention
 
 I consider  [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
 ,  [Clean Architecture](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html),
@@ -68,7 +62,7 @@ feature in the project, where you can't find a pattern of back to back feature d
 
 I can't stress enough of the importance of the previous concepts, for a good design reference.
 
-### Finally
+## Finally
 
 I tried to be as short as possible mentioning only the end result learnings of problems I have struggled with over the
 past years writing code.

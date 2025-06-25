@@ -1,10 +1,10 @@
 ![pineapple pizza](/images/pineapple_pizza.png)
 
-> *Note: This article explores microservices at a holistic level—not per DDD-bounded context. References to size or “big” are shorthand for complexity.*
-
 ---
 
 ### Why Does Microservice Complexity Matter?
+
+> *Note: This article explores microservices at a holistic level—not per DDD-bounded context. References to size or “big” are shorthand for complexity.*
 
 Complexity sneaks in for many reasons: [orphaned projects](/blog#orphaned_projects), fear of recreating a monolith, or accidental architectural sprawl. While there are plenty of [analysis tools](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) and [techniques](https://blog.codacy.com/an-in-depth-explanation-of-code-complexity/) for reasoning about code, they rarely help you answer the real question:
 
@@ -33,13 +33,13 @@ To reason about complexity, we need to:
 
 ---
 
-### 1.0 Microservice as an Object
+### Microservice as an Object
 
 A microservice isn’t just a deployable artifact—it’s an ecosystem. Engineers interact with it through CI/CD pipelines, observability tools, programming languages, code style, documentation quality, dependencies, and operational behavior. All of this forms the **surface area of complexity**.
 
 ---
 
-### 2.0 What Can Be Measured?
+### What Can Be Measured?
 
 Since complexity isn’t a direct metric, go back to **business needs**:
 
@@ -49,7 +49,7 @@ This “time to comprehension” is a meaningful proxy for complexity—especial
 
 ---
 
-### 3.0 Ways to Measure
+### Ways to Measure
 
 You can’t perfectly predict time or grasp the unknown—but you can approximate. Use practical comparisons:
 
@@ -67,7 +67,7 @@ There’s no single formula to plug these into—but they provide a foundation t
 
 ---
 
-### With That, You Can:
+### With That, You Can
 
 * Set realistic expectations for stakeholders
 * Align decisions with team capacity:
