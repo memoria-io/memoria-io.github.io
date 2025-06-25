@@ -2,9 +2,7 @@
 
 ### Overview
 
-**Composable Infrastructure Stack for Distributed Systems**
-
-Project Argon is a layered, modular Infrastructure as Code (IaC) toolkit built for running microservices across environments—from bare metal to production Kubernetes. It automates the entire stack, including virtualization, container orchestration, platform tooling, and GitOps-based application delivery.
+Project Argon is a layered, modular Infrastructure as Code (IaC) built for running microservices across environments—from bare metal to production Kubernetes. It automates the entire stack, including virtualization, container orchestration, platform tooling, and GitOps-based application delivery.
 
 Inspired by real-world needs, it provides a composable alternative to public cloud platforms for teams looking to self-host, reduce costs, or retain infrastructure control using platforms like DigitalOcean—while staying compatible with any managed Kubernetes provider. Each layer of Argon can be used selectively, enabling infrastructure setups ranging from full control (baremetal) to hybrid models (DigitalOcean, Vultr, Hetzner) or outer-layer GitOps overlays on top of fully managed services (like AWS EKS).
 
