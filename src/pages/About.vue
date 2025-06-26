@@ -211,7 +211,12 @@
           <!-- Founder Info -->
           <div class="mb-8">
             <p class="text-[#5c738a] text-lg leading-relaxed mb-6">
-              Memoria IO was founded by <strong class="text-[#101418]">Ismail Marmoush</strong>, a Software Engineer
+              Memoria IO was founded by <a href="https://marmoush.com" target="_blank" rel="noopener noreferrer" class="text-[#3f7fbf] hover:text-[#2d5d8f] hover:underline font-medium inline-flex items-center ml-1">
+                <strong class="text-[#101418]">Ismail Marmoush</strong>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>, a Software Engineer
               with over a decade of experience across leading European tech companies.
             </p>
             <p class="text-[#5c738a] text-lg leading-relaxed mb-6">
