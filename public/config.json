@@ -19,38 +19,38 @@
       "excerpt": ""
     },
     {
-      "filePath": "blog/microservice_without_pizza.md",
+      "filePath": "blog/microservice-sizing-without-pizza.md",
       "title": "How big a microservice should be without pizzas",
       "lastUpdated": "2020-12-25",
       "excerpt": ""
     },
     {
-      "filePath": "blog/dropping_getters_setters.md",
+      "filePath": "blog/dropping-getters-setters.md",
       "title": "Dropping getters and setters",
       "lastUpdated": "2019-12-13",
       "excerpt": ""
     },
     {
-      "filePath": "blog/error_handling.md",
+      "filePath": "blog/reactive-functional-error-handling.md",
       "title": "Reactive functional error handling",
       "lastUpdated": "2019-11-12",
       "excerpt": ""
     },
     {
-      "filePath": "blog/orphaned_projects.md",
+      "filePath": "blog/orphaned-projects.md",
       "title": "Orphaned projects",
       "lastUpdated": "2019-04-01",
       "excerpt": ""
     },
     {
-      "filePath": "blog/GoodArchitectureDesign.md",
+      "filePath": "blog/good-architecture-design.md",
       "title": "Good Architecture Design",
       "lastUpdated": "2018-12-24",
       "excerpt": ""
     },
     {
-      "filePath": "blog/autocompletion.md",
-      "title": "Debian Autocompletion",
+      "filePath": "blog/bash-autocompletion.md",
+      "title": "Bash Autocompletion",
       "lastUpdated": "2018-01-01",
       "excerpt": ""
     }

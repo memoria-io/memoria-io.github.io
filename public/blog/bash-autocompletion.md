@@ -16,7 +16,6 @@ To invoke `hello`, you’d run:
 ```bash
 ./main.sh hello blabla
 ```
-
 But remembering all function names can be tedious—unlike Makefiles, there’s no built-in tab completion.
 
 ## Solution
