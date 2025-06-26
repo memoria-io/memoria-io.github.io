@@ -48,9 +48,9 @@ completion(){
 complete -F completion ./main.sh
 ```
 
-> *Disclaimer: After exploring alternatives, I found no simple way to add autocompletion to plain Bash scripts—so I built one.*
+> *Disclaimer: After exploring alternatives, I found no simple way to add autocompletion to plain Bash scripts—so I improved an old one*
 
-And this is how the script would look like, you can also annotate your functions with example comments:
+You can also annotate your functions with example comments:
 
 ```bash
 #!/bin/bash
