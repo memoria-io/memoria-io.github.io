@@ -1,8 +1,10 @@
 ## TL;DR
 
-This is the best keyboard:
+This is the best keyboard design `ANSI 75%`:
 
-<img src="/images/keyboards/vortex_keyboard.jpeg" alt="vortex keyboard" width="400"/>
+<img src="/images/keyboards/vortex_keyboard.png" alt="vortex keyboard" width="400"/>
+
+*Keyboard in image is Vortex mechanical Ansi 75% English*
 
 ---
 
@@ -21,7 +23,7 @@ You constantly need to press the Fn key just to navigate. Highlighting with `Hom
 
 ---
 
-**The QWERTZ**
+**The QWERTZ and ISO**
 
 Living in Germany meant I had to suffer through the German QWERTZ layout.
 It was... traumatic.
