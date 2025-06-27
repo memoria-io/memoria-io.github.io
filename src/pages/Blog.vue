@@ -64,7 +64,7 @@
               repo-id="MDEwOlJlcG9zaXRvcnkxNzMzMTY2MjM="
               category="General"
               category-id="DIC_kwDOClSaD84CsGlz"
-              mapping="url"
+              mapping="og:title"
               strict="0"
               reactions-enabled="1"
               emit-metadata="0"
@@ -210,6 +210,24 @@ watch(() => route.params.postId, async (newPostId) => {
     await loadBlogPostById(newPostId as string)
   }
 })
+
+watch(currentArticle, (newArticle) => {
+  // Update document title
+  if (newArticle && newArticle.title) {
+    document.title = `${newArticle.title} – Memoria IO`;
+  } else {
+    document.title = 'Memoria IO';
+  }
+
+  // Update og:title meta tag
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (!ogTitle) {
+    ogTitle = document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    document.head.appendChild(ogTitle);
+  }
+  ogTitle.setAttribute('content', newArticle && newArticle.title ? newArticle.title : 'Memoria IO');
+}, { immediate: true })
 </script>
 
 <style>
