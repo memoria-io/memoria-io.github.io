@@ -204,4 +204,9 @@ watch(() => route.params.postId, async (newPostId) => {
 :deep(h2), :deep(h3), :deep(h4) {
   scroll-margin-top: 100px;
 }
+
+/* Make blog images have rounded corners */
+.prose img {
+  border-radius: 0.5rem;
+}
 </style> 
