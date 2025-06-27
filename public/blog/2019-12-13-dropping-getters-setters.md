@@ -1,4 +1,4 @@
-[https://stackoverflow.com/questions/3162665/immutable-class](https://stackoverflow.com/questions/3162665/immutable-class))
+[https://stackoverflow.com/questions/3162665/immutable-class](https://stackoverflow.com/questions/3162665/immutable-class)
 
 1. Setters became useless
 2. Later I started dropping the “get” prefix since setters are no longer there.
