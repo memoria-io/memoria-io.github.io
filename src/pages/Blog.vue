@@ -58,6 +58,21 @@
               </div>
             </div>
             <div v-if="content" v-html="content" ref="contentDiv"/>
+            <Giscus
+              repo="memoria-io/memoria-io.github.io"
+              repo-id="MDEwOlJlcG9zaXRvcnkxNzMzMTY2MjM="
+              category="General"
+              category-id="DIC_kwDOClSaD84CsGlz"
+              mapping="url"
+              strict="0"
+              reactions-enabled="1"
+              emit-metadata="0"
+              input-position="bottom"
+              theme="light"
+              lang="en"
+              loading="lazy"
+              crossorigin="anonymous"
+            />
           </div>
         </div>
       </div>
@@ -72,6 +87,7 @@ import { parseMarkdown, highlightCode } from '../services/markdown'
 import { config as fetchAppConfig, type BlogPostMeta, AppConfig } from '../services/config'
 import { loadDocument } from '../services/resources'
 import TableOfContents from '../components/TableOfContents.vue'
+import Giscus from '@giscus/vue'
 
 // State
 const route = useRoute()
