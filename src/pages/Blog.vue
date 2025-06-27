@@ -59,6 +59,7 @@
             </div>
             <div v-if="content" v-html="content" ref="contentDiv"/>
             <Giscus
+              :key="$route.fullPath"
               repo="memoria-io/memoria-io.github.io"
               repo-id="MDEwOlJlcG9zaXRvcnkxNzMzMTY2MjM="
               category="General"
