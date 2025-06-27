@@ -1,6 +1,3 @@
-![pineapple pizza](/images/pineapple_pizza.png)
-
----
 
 ### Why Does Microservice Complexity Matter?
 

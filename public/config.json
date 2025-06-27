@@ -13,48 +13,50 @@
   ],
   "blogPosts": [
     {
-      "filePath": "blog/notice.md",
-      "title": "Notice",
-      "lastUpdated": "2025-06-25",
-      "excerpt": ""
+      "filePath": "blog/2016-01-01-eclipse-papyrus-java-to-uml.md",
+      "title": "Eclipse Papyrus Java to UML",
+      "lastUpdated": "2016-01-01"
     },
     {
-      "filePath": "blog/microservice-sizing-without-pizza.md",
-      "title": "How big a microservice should be without pizzas",
-      "lastUpdated": "2020-12-25",
-      "excerpt": ""
-    },
-    {
-      "filePath": "blog/dropping-getters-setters.md",
-      "title": "Dropping getters and setters",
-      "lastUpdated": "2019-12-13",
-      "excerpt": ""
-    },
-    {
-      "filePath": "blog/reactive-functional-error-handling.md",
-      "title": "Reactive functional error handling",
-      "lastUpdated": "2019-11-12",
-      "excerpt": ""
-    },
-    {
-      "filePath": "blog/orphaned-projects.md",
-      "title": "Orphaned projects",
-      "lastUpdated": "2019-04-01",
-      "excerpt": ""
-    },
-    {
-      "filePath": "blog/good-architecture-design.md",
-      "title": "Good Architecture Design",
-      "lastUpdated": "2018-12-24",
-      "excerpt": ""
-    },
-    {
-      "filePath": "blog/bash-autocompletion.md",
+      "filePath": "blog/2018-01-01-bash-autocompletion.md",
       "title": "Bash Autocompletion",
-      "lastUpdated": "2018-01-01",
-      "excerpt": ""
+      "lastUpdated": "2018-01-01"
+    },
+    {
+      "filePath": "blog/2018-12-24-good-architecture-design.md",
+      "title": "Good Architecture Design",
+      "lastUpdated": "2018-12-24"
+    },
+    {
+      "filePath": "blog/2019-04-01-orphaned-projects.md",
+      "title": "Orphaned projects",
+      "lastUpdated": "2019-04-01"
+    },
+    {
+      "filePath": "blog/2019-06-27-best-keyboard-for-programming.md",
+      "title": "Best keyboard for programming",
+      "lastUpdated": "2019-06-27"
+    },
+    {
+      "filePath": "blog/2019-11-12-reactive-functional-error-handling.md",
+      "title": "Reactive functional error handling",
+      "lastUpdated": "2019-11-12"
+    },
+    {
+      "filePath": "blog/2019-12-13-dropping-getters-setters.md",
+      "title": "Dropping getters and setters",
+      "lastUpdated": "2019-12-13"
+    },
+    {
+      "filePath": "blog/2020-12-25-microservice-sizing-without-pizza.md",
+      "title": "How big a microservice should be without pizzas",
+      "lastUpdated": "2020-12-25"
+    },
+    {
+      "filePath": "blog/2025-06-25-notice.md",
+      "title": "Notice",
+      "lastUpdated": "2025-06-25"
     }
-   
   ],
   "caseStudies": [
     {

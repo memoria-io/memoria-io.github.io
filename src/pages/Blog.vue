@@ -179,8 +179,8 @@ onMounted(async () => {
     if (postId && blogPosts.value.length > 0) {
       await loadBlogPostById(postId)
     } else if (blogPosts.value.length > 0) {
-      // Load first blog post by default
-      await loadBlogPost(appConfig.value.blogPosts[0])
+      // Load most recent blog post by default (last entry)
+      await loadBlogPost(blogPosts.value[blogPosts.value.length - 1])
     }
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load blog list'
