@@ -16,7 +16,6 @@ Built on established patterns like Domain-Driven Design (DDD) and Hexagonal Arch
 
 *Figure 1: Helidon SE 4 (previously Nima) - benchmarks* <sup>[[4]]</sup>
 
-
 ### Motivation
 
 Building microservices remains a recurring challenge. While most services today follow well established patterns, technoglogies and tooling not every medium sized company or Startup has the engineering maturity or architectural expertise to apply them correctly specifically from the start. [Case Study: Zalando's Zalon](/#/engineering/zalon)
