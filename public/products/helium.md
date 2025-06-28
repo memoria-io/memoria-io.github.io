@@ -8,13 +8,14 @@ Backed by over a decade of hands-on experience—and shaped by working alongside
 
 It comes with modular integrations built for real-world backend systems—from environment configs and multi-tenant auth to observability and deployment pipelines. Features like `TLS/mTLS`, `SSO`, `multi-OIDC` provider support, and `OpenTelemetry` are included out of the box, making it easier to get production-ready infrastructure up and running quickly.
 
+It also supports **LLM-based use cases** through integration with [LangChain4j](https://github.com/langchain4j/langchain4j), enabling teams to build AI-assisted features natively within Helidon services.
+
 Built on established patterns like Domain-Driven Design (DDD) and Hexagonal Architecture, it offers ready-to-use examples and a consistent layout that accelerate onboarding and promote long-term maintainability. Powered by [Oracle Helidon SE 4](https://helidon.io/)—formerly Helidon Nima—Project Helium delivers unmatched performance, efficiency, and security through its lightweight runtime and virtual threads support. <sup>[[1]][[2]][[3]][[4]]</sup>
 
 ![Helidon benchmark](images/nima.png)
 
 *Figure 1: Helidon SE 4 (previously Nima) - benchmarks* <sup>[[4]]</sup>
 
-It also supports **LLM-based use cases** through integration with [LangChain4j](https://github.com/langchain4j/langchain4j), enabling teams to build AI-assisted features natively within Helidon services.
 
 ### Motivation
 
