@@ -1,7 +1,7 @@
 <template>
     <div v-if="!consentSet" class="fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 shadow-lg"
         style="font-family: inherit;">
-        <div class="max-w-2xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-2">
             <span class="text-sm text-gray-700 flex items-center">
                 <span class="mr-2 text-lg">🍪</span>
                 We use Google Analytics cookies to improve your experience and understand what our visitors prefer.
