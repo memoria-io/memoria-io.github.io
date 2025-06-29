@@ -24,7 +24,9 @@ You constantly need to press the Fn key just to navigate. Highlighting with `Hom
 
 ## The oversized
 
-Don't get me wrong the very first keyboard I used was 100%, the thing is numpads are mostly useless unless you're doing a lot of numbering data entry and as soon as I started programming the wrist movement was too much, especially moving from mouse to keyboard.
+<img src="/images/keyboards/100keyboard.png" alt="100 percent keyboard" width="600"/>
+
+Don't get me wrong the very first keyboard I used was 100%, the thing is numpads are mostly useless unless you're doing a lot of numbers data entry and as soon as I started programming the wrist movement was too much, especially switching to/from the mouse.
 
 ## So, Why 65% or 75% QWERTY ANSI Keyboards Are the Best
 
