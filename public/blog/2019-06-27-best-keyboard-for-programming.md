@@ -2,43 +2,31 @@
 
 This is the best keyboard design `ANSI 75%`:
 
-<img src="/images/keyboards/vortex_keyboard.png" alt="vortex keyboard" width="400"/>
+<img src="/images/keyboards/vortex_keyboard.png" alt="vortex keyboard" width="600"/>
 
 *Keyboard in image is Vortex mechanical Ansi 75% English*
 
 ---
 
-## Why?
+Most keyboards are either too compact, or oversized
 
-**Our Greatest Enemies**
+## The Very compact
 
 **The 60% / 70% Compact Keyboards**
 
+<img src="/images/keyboards/apple_keyboard.jpeg" alt="apple keyboard" width="600"/>
+
 Common on modern laptops—often Apple-inspired—these "hipster" layouts with tiny arrow keys are a productivity nightmare.
 
-<img src="/images/keyboards/apple_keyboard.jpeg" alt="apple keyboard" width="400"/>
-
-You constantly need to press the Fn key just to navigate. Highlighting with `Home`/`End`? Good luck. And let’s not even talk about hitting the down arrow instead of up.
-**Use the space!**
+You constantly need to press the Fn key just to navigate. Highlighting with `Home`/`End`? Good luck. And let’s not even talk about hitting the down arrow instead of up. Whoever designed it cared more about look than functionality.
 
 ---
 
-**The QWERTZ and ISO**
+## The oversized
 
-Living in Germany meant I had to suffer through the German QWERTZ layout.
-It was... traumatic.
+Don't get me wrong the very first keyboard I used was 100%, the thing is numpads are mostly useless unless you're doing a lot of numbering data entry and as soon as I started programming the wrist movement was too much, especially moving from mouse to keyboard.
 
-<img src="/images/keyboards/apple_keyboard_qwrtz.jpeg" alt="Enigma Machine" width="400"/>
-
-I’m pretty sure the Enigma machine used QWERTZ too.
-
-<img src="/images/keyboards/enigma_machine.jpeg" alt="Enigma Machine" width="400"/>
-
-*It took me hours to find the "@" symbol. Never again -- ehem pun intended*
-
----
-
-## Why 65% or 75% QWERTY ANSI Keyboards Are the Best
+## So, Why 65% or 75% QWERTY ANSI Keyboards Are the Best
 
 > Update: As someone rightly pointed out—75% is optimal if you want the function key row. But this post celebrates the **5% column** + compactness.
 
@@ -47,12 +35,12 @@ I’m pretty sure the Enigma machine used QWERTZ too.
 * `End` is right above the → arrow — perfect placement.
 * `Delete` is just above `Home` and diagonal from `Backspace` — intuitive flow.
 * The **Enter** key is neat and minimal. No oversized ISO monstrosities.
-* **100% keyboards**? Clunky. The numpad is mostly useless and gets in the way of your mouse. And laptops fake it anyway.
 
-My all-time favorite layout?
-The **Dell Inspiron 1545**:
+## My all-time favorite layout?
 
-<img src="/images/keyboards/dell_insprion_keyboard.jpeg" alt="Dell Inspiron Keyboard" width="400"/>
+I was lucky that the first laptop I had was **Dell Inspiron 1545**, btw after almost 15 years, it's still working.
+
+<img src="/images/keyboards/dell_insprion_keyboard.jpeg" alt="Dell Inspiron Keyboard" width="600"/>
 
 ---
 
