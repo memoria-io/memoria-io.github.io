@@ -12,6 +12,9 @@ import Contact from '../pages/Contact.vue'
 declare global {
     interface Window {
         gtag: (...args: any[]) => void;
+        goatcounter?: {
+            count: (opts: { path: string; title: string; event: boolean }) => void;
+        };
     }
 }
 
@@ -66,6 +69,14 @@ router.afterEach((to, from) => {
                 custom_parameter_3: from.fullPath
             });
         }
+    }
+    // GoatCounter SPA tracking
+    if (typeof window !== 'undefined' && window.goatcounter && typeof window.goatcounter.count === 'function') {
+        window.goatcounter.count({
+            path: location.pathname + location.hash,
+            title: document.title,
+            event: true
+        });
     }
 });
 
