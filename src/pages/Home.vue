@@ -266,5 +266,5 @@
 </template>
 
 <script setup lang="ts">
-// Add any logic or imports here if needed
+document.title = 'Memoria IO';
 </script>
