@@ -23,12 +23,7 @@
           class="relative text-[#101418] text-sm font-medium leading-normal hover:text-blue-500 transition-colors"
           :class="{ 'after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-0.5 after:bg-blue-500': $route.path === '/engineering' }"
           >Engineering</router-link>
-          <router-link 
-            to="/blog" 
-            class="relative text-[#101418] text-sm font-medium leading-normal hover:text-blue-500 transition-colors"
-            :class="{ 'after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-0.5 after:bg-blue-500': $route.path === '/blog' }"
-          >Blog</router-link>
-          <router-link 
+          <router-link
             to="/about" 
             class="relative text-[#101418] text-sm font-medium leading-normal hover:text-blue-500 transition-colors"
             :class="{ 'after:absolute after:bottom-[-2px] after:left-0 after:w-full after:h-0.5 after:bg-blue-500': $route.path === '/about' }"

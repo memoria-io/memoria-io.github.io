@@ -224,8 +224,8 @@
               solutions—working closely with engineering teams to reduce complexity and improve delivery speed.
             </p>
             <p class="text-[#5c738a] text-lg leading-relaxed">
-              You can follow his work on the <router-link to="/blog"
-                class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">Memoria Blog</router-link>, connect on
+              You can follow his work on his <a href="https://marmoush.com"
+                class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">Blog</a>, connect on
               <a href="https://www.linkedin.com/in/ismailmarmoush/" target="_blank" rel="noopener noreferrer"
                 class="text-[#3f7fbf] hover:text-[#2d5d8f] font-medium">LinkedIn</a>, or reach out directly at
               <a href="mailto:contact@memoria.io"

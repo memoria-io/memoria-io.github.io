@@ -1,6 +1,5 @@
 export interface AppConfig {
   products: ProductMeta[]
-  blogPosts: BlogPostMeta[]
   caseStudies: CaseStudyMeta[]
 }
 
@@ -8,13 +7,6 @@ export interface ProductMeta {
   filePath: string
   title: string
   lastUpdated: string
-}
-
-export interface BlogPostMeta {
-  filePath: string
-  title: string
-  lastUpdated: string
-  excerpt: string
 }
 
 export interface CaseStudyMeta {
